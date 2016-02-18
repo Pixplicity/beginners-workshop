@@ -16,7 +16,7 @@ _Scale-independent Pixels_ This is like the dp unit, but it is also scaled by th
 
 > **Tip**: Try to never use anything but sp or dp unless you absolutely have to. Using sp and dp will make your Android applications compatible with multiple screen densities and resolutions.
 
-You can resize your graphical resources with the following ratio table:
+You can resize your graphical resources with the following ratio table, or [use our handly online calculator](https://pixplicity.com/dp-px-converter/):
 
 | mdpi | hdpi | xhdpi | xxhdpi |
 | :--: | :--: | :---: | :----: |
@@ -26,6 +26,20 @@ You can resize your graphical resources with the following ratio table:
 `Context` is an interface to global information about an application environment. This is an abstract class whose implementation is provided by the Android system. It allows access to application-specific resources and classes, as well as up-calls for application-level operations such as launching activities, broadcasting and receiving intents, etc. Both the `Application` class and the `Activity` class implement the `Context` interface. The `Application` instance is tied to the lifecycle of the application, while the `Activity` instance is tied to the lifecycle of an Activity. Thus, they have access to different information about the application environment. You normally use the `Activity` context for view-related actions and the `Application` context generally should only be used if you need a context whose lifecycle is separate from the current context, that is tied to the lifetime of the process rather than the current component.
 
 [More info on Context](http://developer.android.com/reference/android/content/Context.html)
+
+### Logging
+
+You can add messages that appear in Logcat with some different methods in `android.util.Log`:
+
+```java
+Log.d("MyTag", "message saved as draft");
+```
+
+To log exceptions:
+
+```java
+Log.e("MyTag", "message draft could not be saved", exception);
+```
 
 ### Toast
 A toast provides simple feedback about an operation in a small popup. It only fills the amount of space required for the message and the current activity remains visible and interactive. For example, navigating away from an email before you send it triggers a "Draft saved" toast to let you know that you can continue editing later. Toasts automatically disappear after a timeout.
