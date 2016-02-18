@@ -1,4 +1,4 @@
-#Android Workshop for Beginners
+#Android Beginners Workshop
 
 Thanks for signing up for the Android Beginners workshop! 
 
