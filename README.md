@@ -1,9 +1,8 @@
 #Android Workshop for Beginners
 
-Thanks for signing up for the Android Workshop for Beginners workshop! 
+Thanks for signing up for the Android Beginners workshop! 
 
-This page is heads-up what the workshop is all about and to lay out the prerequisites 
-to setup your Android development environment.
+This page is an introduction what the workshop is all about and lays out the prerequisites to setup your Android development environment.
 
 ## What you _will_ learn in this workshop
 
@@ -43,15 +42,15 @@ to setup your Android development environment.
 * Working with Services, Broadcast Receivers, Databases, etc.
 
 ## Setting up your workshop development environment
-This workshop is aimed at the intermediate Java or OO programmer who wants to start with native Android development. As a prerequisite we ask you to setup a working Android development environment. Please check if you have already installed (if not download and install) the following software on your computer:
+This workshop is aimed at the intermediate Java or OO programmer who wants to start with native Android development. As a prerequisite, please set up a working Android development environment. Please check if you have already installed&mdash;and if not, download and install&mdash;the following software on your computer:
 
-* (Optional) A [Git](http://git-scm.com/downloads) client or command line tool to clone the workshop repository. [Sourcetree](http://www.sourcetreeapp.com/) is a pretty cool Git GUI client. If you don't want the hassle of working with Git you can get (or download) a zip-file with the repository contents on the day of the workshop.
 * A [Java Software Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html), version 7 is recommended. We advise against using JDK 8 for this workshop. For one since it's not supported :-P On a Mac you need a Java Runtime Environment (JRE) version 6 to be able to run Android Studio. Note: A Java Runtime Environment (JRE) is not enough to do Android development, you need that Java SDK!
 * The [Android Studio](http://developer.android.com/sdk/installing/studio.html) bundle, which includes: 
   * The Android Studio IDE, which is based on the community edition of IntelliJ IDEA. 
   * All the Android SDK Tools to design, test, debug, and profile your app. 
   * The latest Android platform to compile your app. 
   * The latest Android system image to run your app in the emulator
+* **(Optional)** A [Git](http://git-scm.com/downloads) client or command line tool to clone the workshop repository. [Sourcetree](http://www.sourcetreeapp.com/) is a pretty cool Git GUI client. If you don't have an internet connection, or don't want the hassle of working with Git, you can get (or download) a zip-file with the repository contents on the day of the workshop.
 
 ![Android Studio Check for updates](img/android-studio-check-for-updates.png)
 
