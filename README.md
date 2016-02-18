@@ -86,4 +86,6 @@ You must also allow installation of apps from sources other than the Play Store 
 
 If you've installed all the necessary development kits described above you are all set for the workshop!
 
-[Go to lesson 1](section1)
+##Let's go!
+
+You may want to keep this [cheatsheet](cheatsheet.md) at hand. Now let's [go to lesson 1](section1)!
