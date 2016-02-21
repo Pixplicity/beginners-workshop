@@ -1,8 +1,6 @@
-#Android Beginners Workshop
+#Contents
 
-Thanks for signing up for the Android Beginners workshop! 
-
-This page is an introduction what the workshop is all about and lays out the prerequisites to setup your Android development environment.
+This workshop consists of five lessons, each briefly preceded by a short classical presentation. The content of the lessons can be found in this repository.
 
 ## What you _will_ learn in this workshop
 
