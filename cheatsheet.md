@@ -1,8 +1,22 @@
 #Android Cheat Sheet
 
-## General
+## Android Studio
+### Project Structure
+When you create a new project in Android Studio almost all your project files are inside the `src` directory, including resources and the manifest file. For the most part, you should need to modify only the files under the `src` directory. More information about the Gradle project structure is available in the [Gradle Plugin User Guide](http://tools.android.com/tech-docs/new-build-system/user-guide).
 
-### _Dips_ (dp) and _sips_ (sp)
+### Keyboard shortcuts
+
+Keymap for Windows/Linux [PDF](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf)
+
+Keymap for Mac OS X [PDF](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf)
+
+### Import projects in Android Studio
+In Android Studio, chose **File → Import Project** and select the folder of the sample, exercise or solution project.
+Android Studio may ask you to choose the type of project you are importing. If this is the case, make sure to choose **Import project from external model** and select the **Gradle** option.
+
+## Android concepts
+
+### Dimensions: _dips_ (dp) and _sips_ (sp)
 You can define view widths and hights and font sizes using **px**, **dp** or **sp**.
 
 **px**
@@ -55,17 +69,3 @@ Toast.makeText(this, "Message saved as draft.", Toast.LENGTH_LONG).show();
 If user response to a status message is required, consider instead using a [Notification]().
 
 [More info on Toast](http://developer.android.com/guide/topics/ui/notifiers/toasts.html)
-
-## Android Studio
-### Project Structure
-When you create a new project in Android Studio almost all your project files are inside the `src` directory, including resources and the manifest file. For the most part, you should need to modify only the files under the `src` directory. More information about the Gradle project structure is available in the [Gradle Plugin User Guide](http://tools.android.com/tech-docs/new-build-system/user-guide).
-
-### Keyboard shortcuts
-
-Keymap for Windows/Linux [PDF](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf)
-
-Keymap for Mac OS X [PDF](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf)
-
-### Import projects in Android Studio
-In Android Studio, chose **File → Import Project** and select the folder of the sample, exercise or solution project.
-Android Studio may ask you to choose the type of project you are importing. If this is the case, make sure to choose **Import project from external model** and select the **Gradle** option.
