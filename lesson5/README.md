@@ -286,9 +286,14 @@ To make a long story short create a new **MediaPlayer** field with name `mp` in 
 
 That's it! Take your project for a spin!
 
-## Extra exercises
-* When you click on an image that animal sound will be played. When it's long and you move to the next page the other animal's sound is still playing, which is kind of confusing. Add an **OnPageChangeListener** to the `mViewPager` instance in **MainActivity** and override the `public void onPageSelected(int position)` method to stop playing the currently playing sound.
-* When you click on an image and hear a sound press the back or the home button. Do you still hear a sound? Can you explain what happens? Which activity life cycle method can you override to stop the sound from playing?
+### Exercise 05.04: Pausing sounds
+
+When you click on an image that animal sound will be played. When it's long and you move to the next page the other animal's sound is still playing, which is kind of confusing. Add an **OnPageChangeListener** to the `mViewPager` instance in **MainActivity** and override the `public void onPageSelected(int position)` method to stop playing the currently playing sound.
+
+### Exercise 05.05: Adhering to context
+
+When you click on an image and hear a sound press the back or the home button. Do you still hear a sound? Can you explain what happens? Which activity life cycle method can you override to modify this behavior?
 
 ## Conclusion
+
 The **ViewPager** is a pretty standard view which you will use frequently in your Android apps. **Fragments** allow you to cut up your UI in smaller portions and with their modularity force you to chop up your app architecture as well. Fragments should know very little to nothing about their parent activities. Any user events happening inside the fragment should be propagated up to its parent activity.
