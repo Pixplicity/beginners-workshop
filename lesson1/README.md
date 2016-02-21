@@ -1,4 +1,4 @@
-# _Lesson 1_<br/>Android Studio and Android projects
+# _Lesson #1_<br/>Android Studio and Android projects
 
 ## Learning goals
 * Importing an Android project in Android Studio
