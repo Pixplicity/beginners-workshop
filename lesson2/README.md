@@ -1,6 +1,6 @@
 # _Lesson #2_<br/>Activities and Views
 
-## What you'll learn in this lesson
+## Learning goals
 * Working with **Activities**, and get basic understanding of **the Activity Life Cycle**,
 * **Debugging** basics,
 * Becoming familiar with **common Views** or _widgets_ and how to add them to an Activity,
