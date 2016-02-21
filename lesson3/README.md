@@ -66,13 +66,13 @@ startActivity(Intent.createChooser(intent, "Send mail..."));
 1. Click on the TODO Tool View and locate the `TODO` items.
 1. Double-click on one to navigate to the code and implement the exercises.
 
-### Exercise 03.01
+### Exercise 03.01: Explicit intent
 
 Implement the following code: 
   * Retrieve the e-mail address and subject from their EditText views.
   * Create an _explicit_ intent and use intent extras to pass the retrieved e-mail address and -subject to that intent. Start the **SecondActivity** and provide it with the intent just created.
 
-### Exercise 03.02
+### Exercise 03.02: Implicit intent
 
 Implement the following code: 
   * Retrieve the e-mail message from the **EditText** view.
@@ -80,11 +80,12 @@ Implement the following code:
 
 > Notice that you don't need any special permissions to use implicit intents to chain another activity to task. You are basically leaving the end user in control of how and what will be done with their data. They can simply cancel the e-mail composition by pressing the back button. If you want to send e-mail directly from your app, without user intervention you must at least request the [INTERNET](http://developer.android.com/reference/android/Manifest.permission.html#INTERNET) persmission and do all the SMTP preparing and sending yourself. While that's probably not what you want to do, [here's a tutorial](http://mobiledevtuts.com/android/android-sdk-smtp-email-tutorial/) which uses [JavaMail for Android](https://code.google.com/p/javamail-android/) to achieve this task.
 
-### Exercise 03.03
+### Exercise 03.03: ADB command
 
 On the command line type `adb shell dumpsys activity` and try to interpret the output.
 
-## BONUS Exercise
+### Exercise 03.04 (bonus!): Exchanging data between Activities
+
 In this additional exercise we are going to change the flow of the application. FirstActivity will show the email address, subject, message and a button to send the email. SecondActivity will show a big EditText view and a 'ready' button which will send the entered message back to the FirstActivity.
 
 * Add an EditText view to activity_first.xml which will show just three lines of the email message.
