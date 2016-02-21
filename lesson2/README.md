@@ -9,7 +9,7 @@
 If you know all about the learning goals for this lesson move on to [lesson 3](../section3/README.md).
 
 ## Activities
-An activity usually is a full Android screen that a user sees or interacts with. The `onCreate` method you saw in the MainActivity in lesson 1 is what we call a _life cycle callback_ method and this gives you a hook where you can initialize your activity when the Android system decides it is time to show your activity to the user. The [Activity life cycle](http://developer.android.com/reference/android/app/Activity.html#ActivityLifecycle) is very important and deserves good understanding when you are planning to do more Android development after this workshop.
+An activity usually is a full Android screen that a user sees or interacts with. The `onCreate()` method you saw in the MainActivity in lesson 1 is what we call a _life cycle callback_ method and this gives you a hook where you can initialize your activity when the Android system decides it is time to show your activity to the user. The [Activity life cycle](http://developer.android.com/reference/android/app/Activity.html#ActivityLifecycle) is very important and deserves good understanding when you are planning to do more Android development after this workshop.
 
 ## The MainActivity launch intent filter
 When the user selects your app icon from the Home screen, the system calls the `onCreate()` method for the Activity in your app that you've declared to be the "launcher" (or "main") activity. This is the activity that serves as the main entry point to your app's user interface.
@@ -85,45 +85,49 @@ apply plugin: 'hugo'
 
 And than add the `@DebugLog` annotation to any method you want to _debug log_.
 
-A couple of the Activity life cycle methods in the [MainActivity](sample02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) in [sample02](sample02) are annotated with the `@DebugLog` annotation. Take that project for a spin to get a grasp of how your activity is managed by the system. Tip, rotate your device and see what happens. Can you explain why this happens?
+A couple of the Activity life cycle methods in the [MainActivity](lesson02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) in [lesson02](lesson02) are annotated with the `@DebugLog` annotation. Take that project for a spin to get a grasp of how your activity is managed by the system. Tip, rotate your device and see what happens. Can you explain why this happens?
 
 ## Exercises
 
-### Adding new views to the layout
-Open the [activity_main.xml](sample02/lifecyclelogger/src/main/res/layout/activity_main.xml) file in the [sample02](sample02) project in Android Studio and click on the **Design** tab next to the **Text** tab below. You should see something like this.
+### Exercise 02.01: Adding new views to the layout
+
+Open the [activity_main.xml](lesson02/lifecyclelogger/src/main/res/layout/activity_main.xml) file in the [lesson02](lesson02) project in Android Studio and click on the **Design** tab next to the **Text** tab below. You should see something like this.
 
 ![Android Design Tool View](img/as-design-tool-view.png)
 > Android Design Tool View
 
 On the left you see a long list of **Views** or _widgets_. Grab a **Person Name** from the **Text Fields** section and place it under the **TextView** view. Grab a **Button** from the **Widgets** section and place it under the **EditText** view.
 
-### Referencing views in the layout in your code
-To get a reference to the views in the layout in your code you can create a resource-id for every view you want to interact with. Creating an id is done by adding an **android:id** attribute to the views and giving them an (e.g.) **@+id/uniquenameforyourview** value. The "@"-sign identifies a resource (we already saw references to string resources via **@string/app_name** for instance). The "+"-sign just before the **id** indicates we want to _create_ and id. If we forget the "+"-sign the **@id/uniquenameforyourview** becomes a _reference_.
+### Exercise 02.02: Referencing views in the layout in your code
 
-Go ahead and add **android:id** attributes to the **TextView**, **EditText** and **Button** views in the [activity_main.xml](sample02/lifecyclelogger/src/main/res/layout/activity_main.xml) file.
+To get a reference to the views in the layout in your code you can create a resource-id for every view you want to interact with. Creating an id is done by adding an `android:id` attribute to the views and giving them an (e.g.) `@+id/uniquenameforyourview` value. The "@"-sign identifies a resource (we already saw references to string resources via `@string/app_name` for instance). The "+"-sign just before the **id** indicates we want to _create_ and id. If we forget the "+"-sign the `@id/uniquenameforyourview` becomes a _reference_.
 
-Now open the [MainActivity](sample02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) file in Android Studio. When our acitivity is created (in **onCreate**) and our contentView is set the layout in the XML file gets _inflated_ by the Android System. This basically means whatever is in the XML file will be used to create a _View hierarchy_ of plain Java objects we can interact with in our code. We can only create references to our views in the layout, if they have a proper **id**. We can reference them by calling the **findViewById(int id)** method like this.
+Go ahead and add `android:id` attributes to the **TextView**, **EditText** and **Button** views in the [activity_main.xml](lesson02/lifecyclelogger/src/main/res/layout/activity_main.xml) file.
+
+Now open the [MainActivity](lesson02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) file in Android Studio. When our acitivity is created (in `onCreate()`) and our contentView is set the layout in the XML file gets _inflated_ by the Android System. This basically means whatever is in the XML file will be used to create a _View hierarchy_ of plain Java objects we can interact with in our code. We can only create references to our views in the layout, if they have a proper `id`. We can reference them by calling the `findViewById(int id)` method like this.
 
 ```java
 TextView textView = (TextView) findViewById(R.id.uniquenameforyourview);
 ```
 
-Go ahead and hook-up all the views in the **onCreate** method in [MainActivity](sample02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java). Make _fields_ out of the view references while you are at it, so you can reference them from other methods in your class (not just the onCreate method).
+Go ahead and hook-up all the views in the `onCreate()` method in [MainActivity](lesson02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java). Make _fields_ out of the view references while you are at it, so you can reference them from other methods in your class (not just the onCreate method).
 
-### Interacting with the views
-You can [click on any view](http://developer.android.com/reference/android/view/View.html#setOnClickListener(android.view.View.OnClickListener)) in Android, but **Buttons** are, of course, the ideal things to click on. You can listen to a button click by implementing- and adding a **View.OnCLickListener** to your button.
+### Exercise 02.03: Interacting with the views
+
+You can [click on any view](http://developer.android.com/reference/android/view/View.html#setOnClickListener(android.view.View.OnClickListener) in Android, but **Buttons** are, of course, the ideal things to click on. You can listen to a button click by implementing- and adding a **View.OnCLickListener** to your button.
 
 ```java
 button.setOnClickListener(this);
 ```
 
-What we are saying here is that our **MainActivity** should implement the **View.OnCLickListener** interface. If you have added the above line in your **onCreate** method you'll see a red curly line under the **this** reference. Move your cursor on the **this** keyword and press **alt-enter**. Select the second option. You are then prompted to implement the **onClick** method, which is just what we need
+What we are saying here is that our **MainActivity** should implement the **View.OnCLickListener** interface. If you have added the above line in your `onCreate()` method you'll see a red curly line under the `this` reference. Move your cursor on the `this` keyword and press `Alt+Enter`. Select the second option. You are then prompted to implement the `onClick()` method, which is just what we need
 
 ![Android Studio quick-fix](img/as-quick-fix.png)
 
-Now in the **onClick(View v)** method try to read the value from the **EditText** reference and use that value to update the **TextView** reference.
+Now in the `onClick(View v)` method try to read the value from the **EditText** reference and use that value to update the **TextView** reference.
 
-### Change the app icon
+### Exercise 02.04: Change the app icon
+
 By default you get this standard app launch icon for new Android projects
 
 ![Default launch icon](img/ic_launcher.png)
@@ -131,11 +135,12 @@ By default you get this standard app launch icon for new Android projects
 
 Use the [Android Asset Studio](http://android-ui-utils.googlecode.com/hg/asset-studio/dist/icons-launcher.html#foreground.type=clipart&foreground.space.trim=1&foreground.space.pad=0&foreground.clipart=res%2Fclipart%2Ficons%2Fsocial_send_now.svg&foreColor=c00%2C0&crop=0&backgroundShape=bevel&backColor=ffffff%2C100) to create a new launch icon.
 
-### Change the Activity title
-The title of the MainActivity in [sample02](sample02) is set via the **android:label="@string/app_name"** attribute in the [AndroidManifest.xml](sample02/lifecyclelogger/src/main/AndroidManifest.xml) file. Use another string and try to change the title of the MainActivity class in the **onCreate** method.
+### Exercise 02.05: Change the Activity title
+The title of the MainActivity in [lesson02](lesson02) is set via the `android:label="@string/app_name"` attribute in the [AndroidManifest.xml](lesson02/lifecyclelogger/src/main/AndroidManifest.xml) file. Use another string and try to change the title of the MainActivity class in the `onCreate()` method.
 
-### Change the background color
+### Exercise 02.06: Change the background color
+
 Try to change the background color of the MainActivity in the [activity_main.xml](sample02/lifecyclelogger/src/main/res/layout/activity_main.xml) file.
 
-##Conclusion
-You've learned how to add more Views to your layout and how to reference and interact with them in your code. You have seen methods to log (debug) statements to Android's logcat. On to [lesson 3](../section3/README.md) where you will learn more about the activity back stack and how to move from one Activity to another with _explicit_ and _implicit_ **Intents**.
+## Conclusion
+You've learned how to add more Views to your layout and how to reference and interact with them in your code. You have seen methods to log (debug) statements to Android's logcat. On to [lesson 3](../section3/README.md) where you will learn more about the activity back stack and how to move from one Activity to another with _explicit_ and _implicit_ Intents.
