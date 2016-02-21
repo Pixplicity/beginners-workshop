@@ -199,7 +199,9 @@ public class AnimalPagerAdapter extends FragmentPagerAdapter {
 
 The **FragmentPagerAdapter** is an abstract class which asks us to implement one method: `public Fragment getItem(int position)`. 
 
-## Exercise 05.01
+## Exercises (part 1)
+
+### Exercise 05.01: Creating a Fragment
 
 Simply return a new **AnimalFragment** in the `public Fragment getItem(int position)` method.
 ```java
@@ -209,7 +211,7 @@ public Fragment getItem(int position) {
 }
 ```
 
-## Exercise 05.02
+### Exercise 05.02: Show a number of pages
 
 The **PagerAdapater** itself is an abstract class as well, which in turn asks us to implement the `getCount()` method we saw in [lesson 4](../section4).
 ```java
@@ -218,7 +220,8 @@ public int getCount() {
     return 0; // TODO Exercise 05.02 - Return the amount of animals in our data set.
 }
 ```
-##Exercise 05.03
+
+### Exercise 05.03: Get the pager hooked up
 
 Revisit the `onCreate` method in the **MainActivity** and set the adapter of the `mViewPager` object to a newly created **AnimalPagerAdapter**.
 
@@ -233,7 +236,10 @@ You might have noticed that the **Animal** data object holds a new field, `sound
 
 In our case we've included ogg vorbis sound bites for every animal in the `mAnimals` data array in the **AnimalPagerAdapter** class.
 
-##Exercise
+## Exercises (part 2)
+
+### Exercise 05.04: Play sounds
+
 * Open your **AnimalFragment** class and add a new integer field called `soundResource`. This looks a lot like the already defined `imageResource` field so walk through the class definition and add all the necessary code to correctly save and restore the value of this new `soundResource` field.
 
 It is good practice to let your fragment know as little as possible about its parent activity. Sometimes your fragments contains a list and when the user clicks on an item in this list it is best to let the containing activity handle the list click. In our case, when a user clicks the image we want to let our **MainActivity** handle this event. One way to do this is define a **Contract** interface in your fragment.
