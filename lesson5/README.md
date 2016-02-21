@@ -79,8 +79,7 @@ The `fragment_image.xml` file is already present and contains a single **ImageVi
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
            android:layout_width="match_parent"
            android:layout_height="match_parent"
-           android:scaleType="centerCrop">
-</ImageView>
+           android:scaleType="centerCrop"/>
 ```
 > The `android:scaleType="centerCrop"` attribute says to center the image and _crop_ it so it nicely fits the whole area.
 
@@ -166,7 +165,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		mViewPager = (ViewPager) findViewById(R.id.view_pager);
-		(...)
+		//...
 ```
 
 The **ViewPager** needs an implementation of **PagerAdapter** as a data-view binder. A common approach is to create an inner class which extends **PagerAdapter**, or the **FragmentPagerAdapter** in our case.
@@ -186,7 +185,7 @@ public class AnimalPagerAdapter extends FragmentPagerAdapter {
         mAnimals.add(new Animal("Chicken", "Bird",
                 R.drawable.chicken_thumb, R.drawable.chicken, R.raw.chicken,
                 "http://a-z-animals.com/animals/chicken/"));
-		(...)
+		//...
     }
 
     public AnimalPagerAdapter(FragmentManager fm) {
@@ -272,14 +271,14 @@ If all's well you'll see a red curly line appear, once you add the implements st
 To make a long story short create a new **MediaPlayer** field with name `mp` in your **MainAcitivity**. With an instance of **MediaPlayer** you can play sounds in Android. Implement the `playSound` method with the following code.
 
 ```java
-    @Override
-    public void playSound(int soundResource) {
-        if (mp != null) { // When we've previously created a MediaPlayer object
-            mp.release(); // Stop playing the previous sound
-        }
-        mp = MediaPlayer.create(this, soundResource); // Create a new MediaPlayer object for the given sound resource
-        mp.start(); // Start playback
+@Override
+public void playSound(int soundResource) {
+    if (mp != null) { // When we've previously created a MediaPlayer object
+        mp.release(); // Stop playing the previous sound
     }
+    mp = MediaPlayer.create(this, soundResource); // Create a new MediaPlayer object for the given sound resource
+    mp.start(); // Start playback
+}
 ```
 
 > A more convenient approach is to use Jake Wharton's ContractFragment (see [this Gist](https://gist.github.com/JakeWharton/2621173)) which takes care of all the casting and extend your fragments from that class.
