@@ -30,7 +30,7 @@ This workshop consists of five lessons, each briefly preceded by a short classic
 **[Lesson 5](lesson5/README.md): Creating a simple image viewer app**
 * Basic understanding of **Fragments**
 * Basic understanding of **ViewPagers** and the **FragmentPagerAdapter**
-* Playing (animal ;-) sounds with the **MediaPlayer**
+* Playing sounds with the **MediaPlayer**
 
 ## What you _won't_ learn in this workshop
 
