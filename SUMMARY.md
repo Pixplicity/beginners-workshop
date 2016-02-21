@@ -1,5 +1,5 @@
 # Summary
 
 * [Contents](contents.md)
-* Getting started
+* [Getting started](getting_started.md)
 
