@@ -1,12 +1,11 @@
 # _Lesson #1_<br/>Android Studio and Android projects
 
 ## Learning goals
-* Importing an Android project in Android Studio
-* Understand and navigate the basic Android project structure in Android Studio
-  * Learn about the **AndroidManifest.xml** file
-  * Know where the java source files are located
-  * Understand the basics of resources
-  * Learn about **shape drawables**
+* Importing an Android project in **Android Studio**,
+* Navigating the basic Android project structure,
+  * Understanding the **AndroidManifest.xml** file,
+  * Knowing where the Java source files are located,
+  * Understanding the basics of resources, such as **shape drawables**.
   
 If you know all about the learning goals for this lesson move on to [lesson 2](../section2/README.md).
 
