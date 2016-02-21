@@ -114,13 +114,13 @@ Go ahead and hook-up all the views in the `onCreate()` method in [MainActivity](
 
 ### Exercise 02.03: Interacting with the views
 
-You can [click on any view](http://developer.android.com/reference/android/view/View.html#setOnClickListener(android.view.View.OnClickListener) in Android, but **Buttons** are, of course, the ideal things to click on. You can listen to a button click by implementing- and adding a **View.OnCLickListener** to your button.
+You can [click on any view](http://developer.android.com/reference/android/view/View.html#setOnClickListener(android.view.View.OnClickListener) in Android, but **Buttons** are, of course, the ideal things to click on. You can listen to a button click by implementing- and adding a **View.OnClickListener** to your button.
 
 ```java
 button.setOnClickListener(this);
 ```
 
-What we are saying here is that our **MainActivity** should implement the **View.OnCLickListener** interface. If you have added the above line in your `onCreate()` method you'll see a red curly line under the `this` reference. Move your cursor on the `this` keyword and press `Alt+Enter`. Select the second option. You are then prompted to implement the `onClick()` method, which is just what we need
+What we are saying here is that our **MainActivity** should implement the **View.OnClickListener** interface. If you have added the above line in your `onCreate()` method you'll see a red curly line under the `this` reference. Move your cursor on the `this` keyword and press `Alt+Enter`. Select the second option. You are then prompted to implement the `onClick()` method, which is just what we need
 
 ![Android Studio quick-fix](img/as-quick-fix.png)
 
@@ -133,7 +133,7 @@ By default you get this standard app launch icon for new Android projects
 ![Default launch icon](img/ic_launcher.png)
 > Default launch icon
 
-Use the [Android Asset Studio](http://android-ui-utils.googlecode.com/hg/asset-studio/dist/icons-launcher.html#foreground.type=clipart&foreground.space.trim=1&foreground.space.pad=0&foreground.clipart=res%2Fclipart%2Ficons%2Fsocial_send_now.svg&foreColor=c00%2C0&crop=0&backgroundShape=bevel&backColor=ffffff%2C100) to create a new launch icon.
+Use the [Android Asset Studio](http://android-ui-utils.googlecode.com/hg/asset-studio/dist/icons-launcher.html#foreground.type=clipart&foreground.space.trim=1&foreground.space.pad=0&foreground.clipart=res%2Fclipart%2Ficons%2Fsocial_send_now.svg&foreColor=c00%2C0&crop=0&backgroundShape=bevel&backColor=ffffff%2C100) to create a new launch icon, or use the built-in image resource generator to create one directly inside Android Studio.
 
 ### Exercise 02.05: Change the Activity title
 The title of the MainActivity in [lesson02](lesson02) is set via the `android:label="@string/app_name"` attribute in the [AndroidManifest.xml](lesson02/lifecyclelogger/src/main/AndroidManifest.xml) file. Use another string and try to change the title of the MainActivity class in the `onCreate()` method.
