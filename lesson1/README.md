@@ -72,7 +72,7 @@ The **build.gradle**, **gradle.properties** and **settings.gradle** files descri
 * The [**build.gradle**](lesson01/build.gradle) file in the root folder describes the necessary dependencies for the build itself and a common setup for all projects
 * The [**helloworld/build.gradle**](lesson01/helloworld/build.gradle) describes how to build the helloworld Android app. It applies an android plugin and describes the build configuration.
 
-The **gradlew** and **gradlew.bat** scripts (for unix resp. Windows environments) are gradle _wrapper_ scripts. You can run a build on the command line using this script. It requires a certain Gradle version and if it is not present it downloads the binaries on the fly. The **gradlew** scripts and **gradle** directory are added automatically when you create a project with the Android Studio New Project Wizard.
+The `gradlew` and `gradlew.bat` scripts (for unix resp. Windows environments) are gradle _wrapper_ scripts. You can run a build on the command line using this script. It requires a certain Gradle version and if it is not present it downloads the binaries on the fly. The `gradlew` scripts and `gradle` directory are added automatically when you create a project with the Android Studio New Project Wizard.
 
 ```
 lesson01> ./gradlew assembleDebug
@@ -300,14 +300,15 @@ Some parameters are common to all layouts:
 1. Create a new resource file with name **res/drawable/background.xml** and add the xml below to that file. Now add an attribute **android:background="@drawable/background"** to the **LinearLayout** or one of the **TextView** tags in the **activity_main.xml** file.
 
 ```xml
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
-  <gradient 
-    android:type="linear"
-    android:centerX="15%" 
-    android:startColor="#FFFF8340" 
-    android:centerColor="#FFFF8340" 
-    android:endColor="#FF052280" 
-    android:angle="45"/>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="rectangle">
+    <gradient 
+            android:type="linear"
+            android:centerX="15%" 
+            android:startColor="#FFFF8340" 
+            android:centerColor="#FFFF8340" 
+            android:endColor="#FF052280" 
+            android:angle="45"/>
 </shape>
 ```
 
