@@ -1,11 +1,11 @@
 # _Lesson #4_<br/>ListViews and Adapters
 
 ## Learning goals
-* Basic understanding of **ListViews** and **Adapters**
-* Working with the **ArrayAdapter**
-* Creating String Array resources
-* Extending the **BaseAdapter** to create a custom adapter
-* Creating more complex layouts for the list items
+* Basic understanding of **ListViews** and **Adapters**,
+* Workinging with the **ArrayAdapter**,
+* Creating string array resources,
+* Extending the **BaseAdapter** to create a custom adapter,
+* Creating more complex layouts for the list items.
 
 If you know all about the learning goals for this lesson move on to [lesson 5](../section5/README.md).
 
