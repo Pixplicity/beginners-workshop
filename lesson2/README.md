@@ -1,12 +1,12 @@
 # _Lesson #2_<br/>Activities and Views
 
 ## What you'll learn in this lesson
-* Working with Activities, and get basic understanding of the Activity Life Cycle
-* Learn about common Views or _widgets_ and how to add them to an Activity
-* Learn how to interact with these views in your code.
-* Learn how to _listen_ to a click event.
+* Working with **Activities**, and get basic understanding of **the Activity Life Cycle**,
+* **Debugging** basics,
+* Becoming familiar with **common Views** or _widgets_ and how to add them to an Activity,
+* Interacting with these views in your code, such as **listen to events**.
 
-If you know all about the learning goals for this lesson move on to [lesson 3](../section3/README.md)
+If you know all about the learning goals for this lesson move on to [lesson 3](../section3/README.md).
 
 ## Activities
 An activity usually is a full Android screen that a user sees or interacts with. The `onCreate` method you saw in the MainActivity in lesson 1 is what we call a _life cycle callback_ method and this gives you a hook where you can initialize your activity when the Android system decides it is time to show your activity to the user. The [Activity life cycle](http://developer.android.com/reference/android/app/Activity.html#ActivityLifecycle) is very important and deserves good understanding when you are planning to do more Android development after this workshop.
@@ -29,7 +29,7 @@ The main activity for your app must be declared in the AndroidManifest.xml file 
 </activity>
 ```
 
-If either the MAIN action or LAUNCHER category are not declared for one of your activities, then your app icon will not appear in the Home screen's list of apps.
+If either the MAIN action or LAUNCHER category are not declared for one of your activities, then your app icon _will not appear_ in the Home screen's list of apps.
 
 ## The Activity Life Cycle
 During the life of an activity, the system calls a core set of lifecycle methods in a sequence similar to a step pyramid. That is, each stage of the activity lifecycle is a separate step on the pyramid. As the system creates a new activity instance, each callback method moves the activity state one step toward the top. The top of the pyramid is the point at which the activity is running in the foreground and the user can interact with it.
