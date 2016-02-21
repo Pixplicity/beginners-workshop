@@ -289,18 +289,21 @@ We already saw a reference to `R.layout.activity_main` in the `onCreate()` metho
 >The most used method to define User Interfaces in Android is XML. There's nothing holding you back in creating UIs in code directly, but there are two main reasons why XML is preferred in most cases:
 >
 >1. **Separation Of Concerns (SOC)** - Defining your UI in xml helps you separate the UI from the code that controls its behavior.
->2. **Resource qualifiers** - Storing different layout XML files in different (qualified) resource directories is a powerful tool to create different user experiences for different device types. The most simple case is a default UI in the **res/layout** directory and e.g. a _landscape_ version of your UI in the **res/layout-land** directory!
+>2. **Resource qualifiers** - Storing different layout XML files in different (qualified) resource directories is a powerful tool to create different user experiences for different device types. The most simple case is a default UI in the `res/layout` directory and e.g. a _landscape_ version of your UI in the `res/layout-land` directory.
 >
 >[More info](http://developer.android.com/guide/topics/ui/declaring-layout.html)
 
 **LinearLayout** is a **ViewGroup**, which in turn is a **View**. It describes the way it layouts its children (in a _linear_ way). **RelativeLayout** lays out its children _relative_ to other views in the view group, or to the parent border (the RelativeLayout itself). **GridLayout** lays out its children in a grid, etc. There are a couple of other layout managers and it's pretty easy to create a layout manager yourself.
 
 Some parameters are common to all layouts:
-* **xmlns:android="http://schemas.android.com/apk/res/android"** Defines the XML namespace for Android. You should define this once, on the first XML tag in the file.
-* **android:layout_width="match_parent"**, **android:layout_height="wrap_content"** Takes up the entire width of the parent (in this case, the window) and has a height which perfectly fits its contents. Possible values are match_parent and wrap_content.
+* `xmlns:android="http://schemas.android.com/apk/res/android"`  
+  Defines the XML namespace for Android. You should define this once, on the first XML tag in the file.
+* `android:layout_width="match_parent"`, `android:layout_height="wrap_content"`  
+  Defines the dimensions of the view. In this case, it takes up the entire width of the parent (indeed, the entire window) and has a height which perfectly fits its contents. Possible values are exact measurements (such as `48dp`), `match_parent` and `wrap_content`.
 
-##Exercises
-> For the following exercises you can use the **Android preview** tool window which opens up when you open the **activity_main.xml** file. There's no need to compile and deploy the app on your phone yet.
+## Exercises
+
+For the following exercises you can use the “Android preview” tool window which opens up when you open the `activity_main.xml` file. There's no need to compile and deploy the app on your phone yet.
 
 1. Open the **activity_main.xml** file and change the **android:layout_width** and **android:layout_height** attributes of both the **LinearLayout** and the **TextView** to either `match_parent` or `wrap_content`. Play around with different combinations. Can you explain what happens?
 1. Add another **TextView** to the **res/activity_main.xml** layout file and see what happens. Can you predict how the other TextView will be layed out?
@@ -321,7 +324,7 @@ Some parameters are common to all layouts:
 </shape>
 ```
 
-> Creating [shape drawables](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) (as they are called) in XML is a very powerful tool in Android. [This on-line tool](http://angrytools.com/gradient/) can create gradient XML files for you. Simply click the **Android** tab at the bottom to get the generated XML.
+> Creating [shape drawables](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) (as they are called) in XML is a very powerful tool in Android. [This online tool](http://angrytools.com/gradient/) can create gradient XML files for you. Simply click the “Android” tab at the bottom to get the generated XML.
 
 ##Conclusion
-This simple hello world app is only scratching the surface of what Android can do, but it gives you great insight in how Android Studio works. On to [lesson 2](../section2/README.md) where you will learn more about Activities and the Activity Life Cycle, more Views and how to interact with these Views in your code.
+This simple hello world app is only scratching the surface of what Android can do, but it gives you great insight in how Android Studio works. On to [lesson 2](../section2/README.md) where you will learn more about **Activities** and **the Activity Life Cycle**, more Views and how to **interact with Views** in your code.
