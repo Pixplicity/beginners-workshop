@@ -104,7 +104,8 @@ Total time: 5.702 secs
 ```
 
 #### The project build.gradle file
-The **build.gradle** file in the helloworld directory is very simple.
+
+The `build.gradle` file in the “helloworld” directory is very simple.
 
 ```
 apply plugin: 'com.android.application'
@@ -128,13 +129,13 @@ dependencies {
 
 The first line says to apply the Android application plugin for this build, whereafter (with the code block preceded by the word 'android') we immediately configure this plugin with the Android Domain Specific Language (DSL). [More info](http://tools.android.com/tech-docs/new-build-system/user-guide)
 
-The **minSdkVersion** version states which Android OS level you minimally support with your app. We have chosen to support version 14 (Android 4.0 - Ice Cream Sandwich) and up in this workshop.
+The `minSdkVersion` version states which Android OS level you minimally support with your app. We have chosen to support version 14 (Android 4.0 - Ice Cream Sandwich) and up in this workshop.
 
-The **targetSdkVersion** informs the system that you have tested against the target version and the system should not enable any compatibility behaviors to maintain your app's forward-compatibility with the target version. The application is still able to run on older versions (down to **minSdkVersion**). To maintain your application along with each Android release, you should increase the value of this attribute to match the latest API level, then thoroughly test your application on the corresponding platform version.
+The `targetSdkVersion` informs the system that you have tested against the target version and the system should not enable any compatibility behaviors to maintain your app's forward-compatibility with the target version. The application is still able to run on older versions (down to `minSdkVersion`). To maintain your application along with each Android release, you should increase the value of this attribute to match the latest API level, then thoroughly test your application on the corresponding platform version.
 
-The **versionCode** is a value which is used mainly for distribution on the [Google Play Store](https://play.google.com/store/apps). Every update should have a higher version code than the previous package. Don't worry about forgetting this. When you upload your app to the Play Store you will be notified if this is not the case.
+The `versionCode` is a value which is used mainly for distribution on the [Google Play Store](https://play.google.com/store/apps). Every update should have a higher version code than the previous package. Don't worry about forgetting this. When you upload your app to the Play Store you will be notified if this is not the case.
 
-The **versionName** value is a user-friendly name for the app version and can be any string. This value is visible to the end-users on Google Play.
+The `versionName` value is a user-friendly name for the app version and can be any string. This value is visible to the end-users on Google Play.
 
 Furthermore the Gradle build system (like the Maven build system) depends on a certain folder structure.
 
@@ -166,7 +167,7 @@ jni/
 > Note: Don't confuse the `src/main/resources` and the `src/main/java/res` folders. The former is for pure Java builds and the latter is used for Android resources.
 
 #### AndroidManifest.xml
-Every application must have an AndroidManifest.xml file (with precisely that name) in its root directory. Let's open up the **AndroidManifest.xml** file of the helloworld app which lives in the in `lesson01/helloworld/src/main` folder.
+Every application must have an AndroidManifest.xml file (with precisely that name) in its root directory. Let's open up the `AndroidManifest.xml` file of the helloworld app which lives in the in `lesson01/helloworld/src/main` folder.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -195,8 +196,9 @@ The manifest file presents essential information about your app to the Android s
 
 * It names the Java **package** for the application. The package name serves as a unique identifier for the application.
 * It describes the components of the application (in our example the activity MainActivity) and under what conditions they can be launched.
-* It declares which permissions the application must have in order to access protected parts of the API and interact with other applications. We don't require any extra permissions in our app, but if you e.g. need internet access, or want to lookup a contact you need to declare those permission here. [More info](http://developer.android.com/reference/android/Manifest.permission.html)
-* It declares the minimum level of the Android API that the application requires. In our case this information is not present in our development AndroidManifest.xml file, but it will be added in the Gradle build, using the information in the **defaultConfig** section in the ./helloworld/build.gradle file.
+* It declares which permissions the application must have in order to access protected parts of the API and interact with other applications. We don't require any extra permissions in our app, but if you e.g. need internet access, or want to lookup a contact you need to declare those permission here.  
+  [More info](http://developer.android.com/reference/android/Manifest.permission.html)
+* It declares the minimum level of the Android API that the application requires. In our case this information is not present in our development AndroidManifest.xml file, but it will be added in the Gradle build, using the information in the `defaultConfig` section in the ./helloworld/build.gradle file.
 
 [More info](http://developer.android.com/guide/topics/manifest/manifest-intro.html)
 
@@ -204,14 +206,16 @@ The manifest file presents essential information about your app to the Android s
 
 An activity is a single, focused thing that the user can do. Almost all activities interact with the user, so the Activity class takes care of creating a window for you in which you can place your UI with `setContentView(View)`. There are two methods almost all subclasses of Activity will implement:
 
-* **onCreate(Bundle)** is where you initialize your activity. Most importantly, here you will usually call `setContentView(int)` with a layout resource defining your UI, and using `findViewById(int)` to retrieve the widgets in that UI that you need to interact with programmatically. But more on that in [lesson 2](../section2)
-* **onPause()** is where you deal with the user leaving your activity. Most importantly, any changes made by the user should at this point be saved.
+* `onCreate(Bundle)` is where you initialize your activity. Most importantly, here you will usually call `setContentView(int)` with a layout resource defining your UI, and using `findViewById(int)` to retrieve the widgets in that UI that you need to interact with programmatically. More on that in [lesson 2](../section2).
+* `onPause()` is where you deal with the user leaving your activity. Most importantly, any changes made by the user should at this point be saved.
 
-To be of any use all activity classes must have a corresponding `<activity>` declaration in their package's **AndroidManifest.xml**.
+To be of any use all activity classes must have a corresponding `<activity>` declaration in their package's `AndroidManifest.xml`.
 
 We only have one activity in our Hello World project, the **MainActivity**. Let's open up [MainActivity.java](lesson01/helloworld/src/main/java/org/dutchaug/workshop/beginners/helloworld/MainActivity.java) and see what's inside.
 
-> You can quickly open a class-file by pressing `Cmd-O` on a Mac and `Ctrl-N` on a Windows or Linux machine. **Tip:** Type `Cmd-Shift-A` on a Mac or `Ctrl-Shift-A` to browse through the various keyboard shortcuts. Or download a PDF file with the most common keyboard shortcuts for [Windows or Linux](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf) or [Mac OS X](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf)
+> You can quickly open a class-file by pressing `Cmd-O` on a Mac and `Ctrl-N` on a Windows or Linux machine.
+
+> **Tip:** Type `Cmd-Shift-A`/`Ctrl-Shift-A` to browse through the various keyboard shortcuts, or download a PDF file with the most common keyboard shortcuts for [Windows or Linux](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf) or [Mac OS X](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf).
 
 ```java
 package org.dutchaug.workshop.beginners.helloworld;
@@ -230,9 +234,9 @@ public class MainActivity extends Activity {
 }
 ```
 
-The **onCreate** method is one of the _Activity Life Cycle_ methods (more on that in [section2](../section2)). In plain English, when our activity is created (by the Android system) we don't do anything with the saved instance state (whatever that is, we simply propagate it up to our super class) and set the content view layout to **R.layout.activity_main**.
+The `onCreate()` method is one of the _Activity Life Cycle_ methods (more on that in [section2](../section2)). In plain English, when our activity is created (by the Android system) we don't do anything with the saved instance state (whatever that is, we simply propagate it up to our super class) and set the content view layout to **R.layout.activity_main**.
 
-**R.layout.activity_main** refers to an integer in a generated class with name **R**. Go ahead, open `R.java` and see what's inside. See anything familiar? Browse around the **res** folder. See something familiar? Android keeps references of all the resources in the **res** directory and saves references to these files as public static final integers in the R.java file. Again, this file is generated, so don't change anything in this file directly, change the file name (or its contents) in the **res** directory instead.
+`R.layout.activity_main` refers to an integer in a generated class with name **R**. Go ahead, open `R.java` and see what's inside. See anything familiar? Browse around the `res` folder. See something familiar? Android keeps references of all the resources in the `res` directory and saves references to these files as public static final integers in the R.java file. Again, this file is generated, so don't change anything in this file directly, change the file name (or its contents) in the `res` directory instead.
 
 #### Resources
 ![res folder](img/res-folder.png)
@@ -245,22 +249,28 @@ You store your resources in the res directory inside your project. The Android r
 The resource compiler compresses and packs your resources and then generates a class named R that contains identifiers you use to reference those resources in your program. This is a little different from standard Java resources, which are referenced by key strings. Doing it this way allows Android to make sure all your references are valid and saves space by not having to store all those resource keys.
 
 ##### Resource quantifiers
-You might have noticed there are several **drawable** directories with different suffixes. These suffixes are called _qualifiers_ and narrow down for which devices these resources should be used. All the default drawables go into the **drawable** directory directory. Any optimized images for e.g. a high density (hdpi), medium density (mdpi) or extra high density (xhdpi) screen go into the **drawable-hdpi**, **drawable-mdpi** and **drawable-xhdpi** directories respectively. Drawables in these directories _override_ any drawables in less specific / qualified directories. [More info](http://developer.android.com/guide/practices/screens_support.html)
+
+You might have noticed there are several `drawable` directories with different suffixes. These suffixes are called _qualifiers_ and narrow down for which devices these resources should be used. All the default drawables go into the `drawable` directory directory. Any optimized images for e.g. a high density (hdpi), medium density (mdpi) or extra high density (xhdpi) screen go into the `drawable-hdpi`, `drawable-mdpi` and `drawable-xhdpi` directories respectively. Drawables in these directories _override_ any drawables in less specific / qualified directories.
+
+[More info](http://developer.android.com/guide/practices/screens_support.html)
 
 ##### Localization resources
-In the **res/values** directory we see a **strings.xml** file. This file contains one _string-resource_ with name `app_name`.
+
+In the `res/values` directory we see a `strings.xml` file. This file contains one _string-resource_ with name `app_name`.
 
 Suppose that your application's default language is English. Suppose also that you want to localize all the text in your application to Dutch. In this case, you could create an alternative strings.xml files, stored in a locale-specific resource directory:
 
-* **res/values/strings.xml** Contains English text for all the strings that the application uses, including text for a string named `app_name`.
-* **res/values-nl/strings.xml** Contains Dutch text for all the strings you want to override. In other words, you don't need to override all the strings. If, for example, the `app_name` is the same in any language you only have to define it once in the **res/values/strings.xml** file.
+* `res/values/strings.xml`  
+  Contains English text for all the strings that the application uses, including text for a string named `app_name`.
+* `res/values-nl/strings.xml`  
+  Contains Dutch text for all the strings you want to override. In other words, you don't need to override all the strings. If, for example, the `app_name` is the same in any language you only have to define it once in `res/values/strings.xml`.
 
 [More info](http://developer.android.com/guide/topics/resources/localization.html)
 
-> Localization is not only for strings. You can localize any resource type by adding the **-&lt;locale&gt;** suffix, e.g. **res/drawable-nl** could contain images with e.g. Dutch words.
+> Localization is not only for strings. You can localize any resource type by adding the `-<locale>` suffix, e.g. `res/drawable-nl` could contain images with Dutch words.
 
 #### Layouts
-We already saw a reference to **R.layout.activity_main** in the **onCreate** method in MainActivity.java. This integer points to the file **res/activity_main.xml**. Let's open that file.
+We already saw a reference to `R.layout.activity_main` in the `onCreate()` method in MainActivity.java. This integer points to the file `res/activity_main.xml`. Let's open that file.
 
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
