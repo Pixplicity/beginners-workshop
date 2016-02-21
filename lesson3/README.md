@@ -1,6 +1,6 @@
 # _Lesson #3_<br/>Intents, Tasks and the Activity Back Stack
 
-## What you'll learn in this lesson
+## Learning goals
 * Basic understanding of **tasks** and the **activity back stack**,
 * Moving from one **Activity** to another with **_explicit_ and _implicit_ Intents**.
 
