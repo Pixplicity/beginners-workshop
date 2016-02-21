@@ -1,10 +1,10 @@
-# Lesson 3<br/>Intents, Tasks and the Activity Back Stack
+# _Lesson #3_<br/>Intents, Tasks and the Activity Back Stack
 
 ## What you'll learn in this lesson
-* Basic understanding of tasks and the _activity back stack_
-* Move from one **Activity** to another with _explicit_ and _implicit_ **Intents**
+* Basic understanding of **tasks** and the **activity back stack**,
+* Moving from one **Activity** to another with **_explicit_ and _implicit_ Intents**.
 
-If you know all about the learning goals for this lesson move on to [lesson 4](../section4/README.md)
+If you know all about the learning goals for this lesson move on to [lesson 4](../section4/README.md).
 
 ## Introduction
 An application usually contains multiple activities. Each activity should be designed around a specific kind of action the user can perform and can start other activities. For example, an email application might have one activity to show a list of new email. When the user selects an email, a new activity opens to view that email.
@@ -61,7 +61,7 @@ startActivity(Intent.createChooser(intent, "Send mail..."));
 ##Exercise
 ![TO DO](img/todo.png)
 
-1. Import the [sample03](sample03) project in Android Studio
+1. Import the [lesson03](lesson03) project in Android Studio
 1. Click on the TODO Tool View double click on the `TODO Exercise 03.01` item.
 1. Implement the following code: 
   * Retrieve the e-mail address and subject from their EditText views.
