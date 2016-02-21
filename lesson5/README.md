@@ -86,15 +86,15 @@ The `fragment_image.xml` file is already present and contains a single **ImageVi
 Okay, now we need to somehow bind the `imageResource` field to the image resource of a given **Animal** object. We cannot add an animal object as an extra argument directly to the **onCreate** method. This is a standard lifecycle method, which is used by the Android system. To add custom arguments to a fragment we must construct a new **Bundle** (A Bundle is a data object which holds a mapping of key-value pairs.) and add it with the `setArguments(Bundle args)` method. A commonly used method for such a construct is to create a `newInstance()` method with the arguments you need for initialization, an animal object will do in our case:
 
 ```java
-    public static AnimalFragment newInstance(Animal animal) {
-        AnimalFragment fragment = new AnimalFragment();
+public static AnimalFragment newInstance(Animal animal) {
+    AnimalFragment fragment = new AnimalFragment();
 
-        Bundle args = new Bundle();
-        args.putInt(ARG_IMAGE_RESOURCE, animal.imageResource);
-        fragment.setArguments(args);
+    Bundle args = new Bundle();
+    args.putInt(ARG_IMAGE_RESOURCE, animal.imageResource);
+    fragment.setArguments(args);
 
-        return fragment;
-    }
+    return fragment;
+}
 ```
 
 Then later, in **onCreate** we can use the `getArguments()` method to initialize our fragment state. 
@@ -111,24 +111,24 @@ It might be a bit cumbersome at first, but this is the correct way to initialize
 We are good if our fragment is instantiated and created by the Android system. But what about this `savedInstanceState` argument? Whenever this argument is not `null` you should know that your fragment is restored by the system and your are given a _saved instance state bundle_ to re-initialize your fragment. You cannot rely on the `getArguments` method to return anything useful in this case!
 
 ```java
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (savedInstanceState != null) {
-            imageResource = savedInstanceState.getInt(ARG_IMAGE_RESOURCE);
-        } else {
-            imageResource = getArguments().getInt(ARG_IMAGE_RESOURCE);
-        }
+@Override
+public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    if (savedInstanceState != null) {
+        imageResource = savedInstanceState.getInt(ARG_IMAGE_RESOURCE);
+    } else {
+        imageResource = getArguments().getInt(ARG_IMAGE_RESOURCE);
     }
+}
 ```
 
 Whenever an activity, and thus its fragment is destroyed its state will be saved. You get an opportunity to save your fragment's state by overriding the `public void onSaveInstanceState(Bundle outState)` method. You simply bind your fragment state to the given bundle argument. In our case this means:
 ```java
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt(ARG_IMAGE_RESOURCE, imageResource);
-    }
+@Override
+public void onSaveInstanceState(Bundle outState) {
+    super.onSaveInstanceState(outState);
+    outState.putInt(ARG_IMAGE_RESOURCE, imageResource);
+}
 ```
 
 ## The ViewPager
@@ -200,9 +200,13 @@ The **FragmentPagerAdapter** is an abstract class which asks us to implement one
 
 ## Exercises (part 1)
 
+1. Import [lesson05](lesson05) in Android Studio.
+1. Click on the “TODO” Tool View to see all `TODO` items in the project.
+
 ### Exercise 05.01: Creating a Fragment
 
-Simply return a new **AnimalFragment** in the `public Fragment getItem(int position)` method.
+1. From the “TODO” Tool View, double click on the `TODO Exercise 05.01` item.
+1. Simply return a new **AnimalFragment** in the `public Fragment getItem(int position)` method.
 ```java
 @Override
 public Fragment getItem(int position) {
@@ -212,7 +216,8 @@ public Fragment getItem(int position) {
 
 ### Exercise 05.02: Show a number of pages
 
-The **PagerAdapater** itself is an abstract class as well, which in turn asks us to implement the `getCount()` method we saw in [lesson 4](../section4).
+1. From the “TODO” Tool View, double click on the `TODO Exercise 05.02` item.
+1. The **PagerAdapater** itself is an abstract class as well, which in turn asks us to implement the `getCount()` method we saw in [lesson 4](../section4).
 ```java
 @Override
 public int getCount() {
