@@ -1,13 +1,13 @@
-# Lesson 4<br/>ListViews and Adapters
+# _Lesson #4_<br/>ListViews and Adapters
 
-## What you'll learn in this lesson
+## Learning goals
 * Basic understanding of **ListViews** and **Adapters**
 * Working with the **ArrayAdapter**
 * Creating String Array resources
 * Extending the **BaseAdapter** to create a custom adapter
 * Creating more complex layouts for the list items
 
-If you know all about the learning goals for this lesson move on to [lesson 5](../section5/README.md)
+If you know all about the learning goals for this lesson move on to [lesson 5](../section5/README.md).
 
 ## Introduction
 One of the most frequently used views in Android apps is the [**ListView**](http://developer.android.com/guide/topics/ui/layout/listview.html). It's also one of the more complex views and can become pretty cumbersome to work with if you don't play by the rules. Lists can be huge and its child views can be complex. If you don't _do it the right way_ your users might experience a bad performing scroll or other odd behaviour. We hope to give you a solid introduction to good use of this powerful view.
@@ -29,14 +29,18 @@ Okay, we've got a layout, now we need a _list of things_. You might retrieve you
 </string-array>
 ```
 
-You can reference a string array resource from a [context](../cheatsheet.md#context) using `getResources().getStringArray(R.array.animals)`
+You can reference a string array resource from a [Context](../cheatsheet.md#context) using:
+
+```java
+getResources().getStringArray(R.array.animals)
+```
 
 ## Adapters
-An **Adapter** object acts as a _bridge_ or between an **AdapterView** (in our case the **ListView** which extends from **AdapterView**) and the underlying data for that view (our String array). The Adapter provides access to the data items. The Adapter is also responsible for making a **View** for each item in the data set by implementing a `public View getView (int position, View convertView, ViewGroup parent)` method, which our **ListView** conveniently calls whenever it needs to render the next view for item with position **position** in the list.
+An **Adapter** object acts as a _bridge_ or between an **AdapterView** (in our case the **ListView** which extends from AdapterView) and the underlying data for that view (our String array). The Adapter provides access to the data items. The Adapter is also responsible for making a **View** for each item in the data set by implementing a `public View getView (int position, View convertView, ViewGroup parent)` method, which our ListView conveniently calls whenever it needs to render the next view for item with position `position` in the list.
 
 The [ArrayAdapter](http://developer.android.com/reference/android/widget/ArrayAdapter.html) is a very simple implementation of the **Adapter** interface, which allows us to bind data in an array to a layout XML file and a single **TextView** in that layout.
 
-We've got all the necessary information to construct an **ArrayAddapter** in our example we use this constructor:
+We've got all the necessary information to construct an **ArrayAdapter** in our example we use this constructor:
 
 ```java
 public ArrayAdapter (Context context, int resource, T[] objects)
@@ -48,19 +52,23 @@ Parameters:
 * **resource** The resource ID for a layout file containing a TextView to use when instantiating views.
 * **objects** The objects to represent in the ListView.
 
-## Exercise 04.01
+## Exercises
+
+### Exercise 04.01: Create a list
+
 It's time to put the learned stuff into practice!
 
-1. Import [sample04](sample04) in Android Studio 
+1. Import [lesson04](lesson04) in Android Studio 
 1. Click on the **TODO Tool View** double click on the `TODO Exercise 04.01` item. This opens the `ListViewInLayoutActivity.java` file at the spot where you should enter the code below.
 1. Set the content view to the `activity_listview_in_layout.xml` layout file.
 1. Bind a local `ListView` object to the `ListView` in the layout with a `findViewById` and the id you can find in the `activity_listview_in_layout.xml` layout file.
-1. Create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](sample04/listviews/src/main/res/values/arrays.xml))
+1. Create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](lesson04/listviews/src/main/res/values/arrays.xml))
 1. Create a new **ArrayAdapter** instance with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the **ListView** object. (At this time you should be able to see something on screen, so take your project for a spin here and click on the "ListView in layout" item)
 1. **Extra** Create a custom list item layout, with at least one `TextView` with id `@android:id/text1`, and assign that to the `ArrayAdapter` constructor.
 
-##Exercise 04.02
-1. Import [sample04](sample04) in Android Studio (if you have not done that already in exercise 04.01)
+### Exercise 04.02: Listen for list item clicks
+
+1. Import [lesson04](lesson04) in Android Studio (if you have not done that already in exercise 04.01)
 1. Click on the **TODO Tool View** double click on the `TODO Exercise 04.02` item.
 1. Again create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](sample04/listviews/src/main/res/values/arrays.xml))
 1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view via the `getListView()` method. (You should be able to see something on screen, so take your project for a spin here and click on the "ListActivity" item)
@@ -124,7 +132,7 @@ At the end of the `getView` method you should return the updated `convertView` w
 Okay, let's see this in action with some data.
 
 ##Exercise 04.03
-1. Import [sample04](sample04) in Android Studio (if you have not done that already in the previous exercises)
+1. Import [lesson04](lesson04) in Android Studio (if you have not done that already in the previous exercises)
 1. Click on the TODO Tool View double click on the `TODO Exercise 04.03` item.
 1. Complete the `getCount()`, `getItem(int position)` and `getItemId(int position)` methods to return logical values and take your project for a spin. 
 1. In `CustomAdapterActivity` complete the `onListItemClick` method. Use the `position` to retrieve an `Animal` object from the `mCustomerAdapter` field and use the `animal.infoUrl` information to create a valid `Uri`.
