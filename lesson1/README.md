@@ -13,11 +13,11 @@ If you know all about the learning goals for this lesson move on to [lesson 2](.
 ## Android Studio
 
 ### Importing an Android project in Android Studio
-Android Studio contains a new project wizard, which is started by chosing **File > New Project...**. While convenient, it also asks you with a lot of questions, settings and steps which might be a bit too overwhelming at this point. For this workshop we'll only focus on ipmorting an existing Android project.
+Android Studio contains a new project wizard, which is started by chosing “File” → “New Project…”. While convenient, it also asks you with a lot of questions, settings and steps which might be a bit too overwhelming at this point. For this workshop we'll only focus on ipmorting an existing Android project.
 
 #### 1. Getting the lesson content
 
-In this lesson we are going to import a very tiny "Hello World" app. Before we do this, please clone this **beginners-workshop** Github repository to your local machine by executing the following command:
+In this lesson we are going to import a very tiny “Hello World” app. Before we do this, please clone this “beginners-workshop” Github repository to your local machine by executing the following command:
 
     git clone git@github.com:pixplicity/beginners-workshop.git
 
@@ -30,34 +30,34 @@ Not familiar with Git? No problem, just grab the ZIP file straight from the proj
 
 #### 2. Importing the project into Android Studio
 
-In Android Studio, chose **File** → **Import Project…** 
+In Android Studio, chose “File” → “Import Project…” 
 
 ![The File Menu](img/as-file-menu.png)
 > The File Menu
 
-…or select the **Import Project…** option from the quick start menu 
+…or select the “Import Project…” option from the quick start menu 
 
 ![The Quick Start Menu](img/as-quick-start-menu.png)
 > The Quick Start Menu
 
-Then select the **lesson01** folder from the folder where you cloned the **beginners-workshop** Github repository.
+Then select the “lesson01” folder from the folder where you cloned the “beginners-workshop” Github repository.
 
 ![Select Gradle Project import](img/as-project-import.png)
-> Android Studio _might_ ask you to choose the type of project you are importing. If this is the case, make sure to choose **Import project from external model** and select the **Gradle** option.
+> Android Studio _might_ ask you to choose the type of project you are importing. If this is the case, make sure to choose “Import project from external model” and select the **Gradle” option.
 
 If all's well Android Studio will start to build your project right away.
 
 ![Run Project](img/run-project.png)
-> After your project is build you can take your project for a spin. Simply click the green run button in the toolbar, select **Run 'helloworld'** from the Run menu or by pressing `Ctrl-R` on a Mac or `Shift-F10` on Windows or Linux. If all's well you will be prompted to run the app on a device, or you can select an emulator. Check the `Use same device for future launches` checkbox to skip this dialog on the next run.
+> After your project is build you can take your project for a spin. Simply click the green run button in the toolbar, select “Run 'helloworld'” from the Run menu or by pressing `Ctrl-R` on a Mac or `Shift-F10` on Windows or Linux. If all's well you will be prompted to run the app on a device, or you can select an emulator. Check the “Use same device for future launches” checkbox to skip this dialog on the next run.
 
 ![USB Debugging](../img/usb-debugging.png)
-> If you want to run the lesson01 app on your device the first thing you need to do is enable **USB debugging** on the device itself (by starting the Settings application and selecting **Developer Options | USB Debugging**). If you don't see the developer options item in your settings menu and you are running Android 4.0 (Ice Cream Sandwich) or higher you can enable them by clicking on the **Settings | About Phone | Build number** item a couple of times to enable them. If you run an older Android version the **USB Debugging** checkbox might reside in the **Applications** section of your settings. 
+> If you want to run the lesson01” app on your device the first thing you need to do is enable “USB debugging” on the device itself (by starting the Settings application and selecting “Developer Options” → “USB Debugging”). If you don't see the developer options item in your settings menu and you are running Android 4.0 (Ice Cream Sandwich) or higher you can enable them by clicking on the “Settings” → “About Phone” → “Build number” item a couple of times to enable them. If you run an older Android version the “USB Debugging” checkbox might reside in the “Applications” section of your settings. 
 
 ![Unknown Sources](../img/unknown-sources.png)
-> You must also allow installation of apps from sources other than the Play Store by checking **Unknown Sources** in the security settings (on most phones). Windows users should install the Android USB device driver. Now it’s simply a matter of plugging in your phone and running the Android application by clicking the run button in Android Studio
+> You must also allow installation of apps from sources other than the Play Store by checking “Unknown Sources” in the security settings (on most phones). Windows users should install the Android USB device driver. Now it’s simply a matter of plugging in your phone and running the Android application by clicking the run button in Android Studio.
 
 ### The Android Project structure
-If you have imported the **lesson01** project successfully you will end up with a project structure like this
+If you have imported the “lesson01” project successfully you will end up with a project structure like this
 
 ![Typical Android Gradle project structure](img/project-structure.png)
 
