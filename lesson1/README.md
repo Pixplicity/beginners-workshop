@@ -8,7 +8,7 @@
   * Understand the basics of resources
   * Learn about **shape drawables**
   
-If you know all about the learning goals for this lesson move on to [lesson 2](../section2/README.md)
+If you know all about the learning goals for this lesson move on to [lesson 2](../section2/README.md).
 
 ## Android Studio
 
