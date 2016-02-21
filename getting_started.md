@@ -26,7 +26,7 @@ A [Git](http://git-scm.com/downloads) client or command line tool is recommended
 
 After you have installed Android Studio you might need to update to the latest version. Fire up Android Studio and select “Check for Updates…” under the “Help” menu. We will use a modern version of Android Studio for this workshop.
 
-Also check that you have the latest “SDK Tools”, “Android platform” and “Extras** installed. You can access the SDK manager by clicking on the SDK Manager Icon ![SDK Manager Icon](img/sdk-manager-studio.png) in the toolbar. Your configuration should look something like the screenshots below, but using whichever latest versions are available.
+Also check that you have the latest “SDK Tools”, “Android platform” and “Extras” installed. You can access the SDK manager by clicking on the SDK Manager Icon ![SDK Manager Icon](img/sdk-manager-studio.png) in the toolbar. Your configuration should look something like the screenshots below, but using whichever latest versions are available.
 
 ![SDK Tools](img/sdk-tools.png)
 > You only need the latest versions of the “Tools”, “Platform-tools” and “Build-tools”
@@ -68,7 +68,7 @@ Plug in your device through USB, and make sure it's set up for USB debugging and
 
 ![USB Debugging](img/usb-debugging.png)
 
-If you want to run apps on your device the first thing you need to do is enable “USB debugging” on the device itself (by starting the Settings app on your device and selecting “Developer Options” | USB Debugging”). If you don't see the developer options item in your settings menu and you are running Android 4.0 (Ice Cream Sandwich) or higher you can enable them by clicking on the “Settings” | “About Phone” | “Build” item a couple of times to enable them. If you run an older Android version the USB Debugging checkbox might reside in the Applications section of your settings. 
+If you want to run apps on your device the first thing you need to do is enable “USB debugging” on the device itself (by starting the Settings app on your device and selecting “Developer Options” → USB Debugging”). If you don't see the developer options item in your settings menu and you are running Android 4.0 (Ice Cream Sandwich) or higher you can enable them by clicking on the “Settings” → “About Phone” → “Build” item a couple of times to enable them. If you run an older Android version the USB Debugging checkbox might reside in the Applications section of your settings. 
 
 ##### Unknown Sources
 
