@@ -1,6 +1,6 @@
-# Lesson 5<br/>Creating a simple image viewer app
+# _Lesson #5_<br/>Creating a simple image viewer app
 
-## What you'll learn in this lesson
+## Learning goals
 * Basic understanding of **Fragments**
 * Basic understanding of **ViewPagers** and the **FragmentPagerAdapter**
 * Playing (animal ;-) sounds with the **MediaPlayer**
@@ -24,16 +24,19 @@ To create a fragment, you must create a subclass of Fragment (or an existing sub
 
 Usually, you should implement at least the following lifecycle methods:
 
-* **onCreate()** The system calls this when creating the fragment. Within your implementation, you should initialize essential components of the fragment that you want to retain when the fragment is paused or stopped, then resumed.
-* **onCreateView()** The system calls this when it's time for the fragment to draw its user interface for the first time. To draw a UI for your fragment, you must return a View from this method that is the root of your fragment's layout. You can return null if the fragment does not provide a UI.
-* **onPause()** The system calls this method as the first indication that the user is leaving the fragment (though it does not always mean the fragment is being destroyed). This is usually where you should commit any changes that should be persisted beyond the current user session (because the user might not come back).
+* `onCreate()`  
+  The system calls this when creating the fragment. Within your implementation, you should initialize essential components of the fragment that you want to retain when the fragment is paused or stopped, then resumed.
+* `onCreateView()`  
+  The system calls this when it's time for the fragment to draw its user interface for the first time. To draw a UI for your fragment, you must return a View from this method that is the root of your fragment's layout. You can return null if the fragment does not provide a UI.
+* `onPause()`  
+  The system calls this method as the first indication that the user is leaving the fragment (though it does not always mean the fragment is being destroyed). This is usually where you should commit any changes that should be persisted beyond the current user session (because the user might not come back).
 
 Most applications should implement at least these three methods for every fragment, but there are several other callback methods you should also use to handle various stages of the fragment lifecycle.
 
 [More info](http://developer.android.com/guide/components/fragments.html)
 
 ##Fragment state
-1. Import the [sample05](sample05) project in Android Studio
+1. Import the [lesson05](lesson05) project in Android Studio
 1. Create a new **AnimalFragment** class with a single **ImageView** which displays the image resource for the given animal.
 
 > **Tip!** You can copy the class definition below, select the `org.dutchaug.workshop.beginners.viewpager` package in Android studio and past the code. The class it automagically created for you!
@@ -81,11 +84,10 @@ The `fragment_image.xml` file is already present and contains a single **ImageVi
 ```
 > The `android:scaleType="centerCrop"` attribute says to center the image and _crop_ it so it nicely fits the whole area.
 
-Okay, now we need to somehow bind the `imageResource` field to the image resource of a given **Animal** object. We cannot add an animal object as an extra argument directly to the **onCreate** method. This is a standard lifecycle method, which is used by the Android system. To add custom arguments to a fragment we must construct a new **Bundle** (A **Bundle** is a data object which holds a mapping of key-value pairs.) and add it with the `setArguments(Bundle args)` method. A commonly used method for such a construct is to create a `newInstance` method with the arguments you need for initialization, an animal object will do in our case:
+Okay, now we need to somehow bind the `imageResource` field to the image resource of a given **Animal** object. We cannot add an animal object as an extra argument directly to the **onCreate** method. This is a standard lifecycle method, which is used by the Android system. To add custom arguments to a fragment we must construct a new **Bundle** (A Bundle is a data object which holds a mapping of key-value pairs.) and add it with the `setArguments(Bundle args)` method. A commonly used method for such a construct is to create a `newInstance()` method with the arguments you need for initialization, an animal object will do in our case:
 
 ```java
     public static AnimalFragment newInstance(Animal animal) {
-
         AnimalFragment fragment = new AnimalFragment();
 
         Bundle args = new Bundle();
@@ -170,45 +172,54 @@ public class MainActivity extends FragmentActivity {
 The **ViewPager** needs an implementation of **PagerAdapter** as a data-view binder. A common approach is to create an inner class which extends **PagerAdapter**, or the **FragmentPagerAdapter** in our case.
 
 ```java
-    public class AnimalPagerAdapter extends FragmentPagerAdapter {
+public class AnimalPagerAdapter extends FragmentPagerAdapter {
 
-        private final List<Animal> mAnimals = new ArrayList<Animal>();
+    private final List<Animal> mAnimals = new ArrayList<Animal>();
 
-        private void createData() {
-            mAnimals.add(new Animal("Bear", "Mammal", R.drawable.bear_thumb, R.drawable.bear, R.raw.bear, "http://a-z-animals.com/animals/bear/"));
-            mAnimals.add(new Animal("Cat", "Mammal", R.drawable.cat_thumb, R.drawable.cat, R.raw.cat, "http://a-z-animals.com/animals/cat/"));
-            mAnimals.add(new Animal("Chicken", "Bird", R.drawable.chicken_thumb, R.drawable.chicken, R.raw.chicken, "http://a-z-animals.com/animals/chicken/"));
-			(...)
-        }
-
-        public AnimalPagerAdapter(FragmentManager fm) {
-            super(fm);
-            createData();
-        }
-
+    private void createData() {
+        mAnimals.add(new Animal("Bear", "Mammal",
+                R.drawable.bear_thumb, R.drawable.bear, R.raw.bear,
+                "http://a-z-animals.com/animals/bear/"));
+        mAnimals.add(new Animal("Cat", "Mammal",
+                R.drawable.cat_thumb, R.drawable.cat, R.raw.cat,
+                "http://a-z-animals.com/animals/cat/"));
+        mAnimals.add(new Animal("Chicken", "Bird",
+                R.drawable.chicken_thumb, R.drawable.chicken, R.raw.chicken,
+                "http://a-z-animals.com/animals/chicken/"));
+		(...)
     }
+
+    public AnimalPagerAdapter(FragmentManager fm) {
+        super(fm);
+        createData();
+    }
+
+}
 ```
 
 The **FragmentPagerAdapter** is an abstract class which asks us to implement one method: `public Fragment getItem(int position)`. 
 
 ## Exercise 05.01
+
 Simply return a new **AnimalFragment** in the `public Fragment getItem(int position)` method.
 ```java
-    @Override
-    public Fragment getItem(int position) {
-        return null; // TODO Exercise 05.01 - Return a new AnimalFragment object for the given position
-    }
+@Override
+public Fragment getItem(int position) {
+    return null; // TODO Exercise 05.01 - Return a new AnimalFragment object for the given position
+}
 ```
 
 ## Exercise 05.02
+
 The **PagerAdapater** itself is an abstract class as well, which in turn asks us to implement the `getCount()` method we saw in [lesson 4](../section4).
 ```java
-    @Override
-    public int getCount() {
-        return 0; // TODO Exercise 05.02 - Return the amount of animals in our data set.
-    }
+@Override
+public int getCount() {
+    return 0; // TODO Exercise 05.02 - Return the amount of animals in our data set.
+}
 ```
 ##Exercise 05.03
+
 Revisit the `onCreate` method in the **MainActivity** and set the adapter of the `mViewPager` object to a newly created **AnimalPagerAdapter**.
 
 **Note:** A **FragmentPagerAdapter** requires a **FragmentManager** instance to add its fragment to the user interface. You should use `getSupportFragmentManager()` as the argument.
