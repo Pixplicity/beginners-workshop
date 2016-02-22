@@ -39,7 +39,7 @@ Most applications should implement at least these three methods for every fragme
 1. Import the [lesson05](lesson05) project in Android Studio
 1. Create a new **AnimalFragment** class with a single **ImageView** which displays the image resource for the given animal.
 
-> **Tip!** You can copy the class definition below, select the `org.dutchaug.workshop.beginners.viewpager` package in Android studio and past the code. The class is automatically created for you!
+> **Tip!** You can copy the class definition below, select the `com.pixplicity.workshop.beginners.viewpager` package in Android studio and past the code. The class is automatically created for you!
 
 ```java
 import android.os.Bundle;
