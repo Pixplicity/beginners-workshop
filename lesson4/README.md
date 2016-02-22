@@ -76,7 +76,7 @@ It's time to put the learned stuff into practice!
 1. **BONUS:** Override the `protected void onListItemClick(ListView l, View v, int position, long id)` method and try to display the animal name via a [Toast](../cheatsheet.md#toast)
 
 ## Building a custom adapter with BaseAdapter
-Okay, a list with Strings is kind of nice as an example, but what about a list with a little bit more information. Let's say a list of animals with a thumbnail image and two textviews with the animal name and the type of animal. Something like this:
+Okay, a list with Strings is kind of nice as an example, but what about a list with a little bit more information. Let's say a list of animals with a thumbnail image and two TextViews with the animal name and the type of animal. Something like this:
 
 ![Custom adapater result](img/custom_adapter_result.png)
 
@@ -88,7 +88,7 @@ Create a new class with name `CustomAdapter` which extends the **BaseAdapter** c
 
 ![Somethings's wrong with our custom adapter](img/somethings_wrong.png)
 
-Move your cursor to the line in error an press `Alt-Enter` to see some quickfixes
+Move your cursor to the line in error an press `Alt-Enter` to see some quickfixes.
 
 ![Quick fix me please](img/quick_fix_me_please.png)
 
