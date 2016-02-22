@@ -48,10 +48,11 @@ However, your application might also want to perform some action, such as send a
 For example, if you want to allow the user to send an email message, you can create the following intent:
 
 ```java
-Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:info@dutchaug.org"));
+Intent intent = new Intent(Intent.ACTION_SENDTO,
+        Uri.parse("mailto:paul@pixplicity.com"));
 intent.putExtra(Intent.EXTRA_SUBJECT, "Hi there!");
-intent.putExtra(Intent.EXTRA_TEXT, "This is the e-mail body");
-startActivity(Intent.createChooser(intent, "Send mail..."));
+intent.putExtra(Intent.EXTRA_TEXT, "I learned a lot from the workshop!");
+startActivity(Intent.createChooser(intent, "Send mail…"));
 ```
 
  When an email application responds to this intent, it reads the strings provided in the extras and places them in the appropriate fields of the email composition form. In this situation, the email application's activity starts and when the user is done, your activity resumes.
@@ -88,7 +89,7 @@ On the command line type `adb shell dumpsys activity` and try to interpret the o
 
 In this additional exercise we are going to change the flow of the application. FirstActivity will show the email address, subject, message and a button to send the email. SecondActivity will show a big EditText view and a 'ready' button which will send the entered message back to the FirstActivity.
 
-* Add an EditText view to activity_first.xml which will show just three lines of the email message.
+* Add an EditText view to `activity_first.xml` which will show just three lines of the email message.
 
 ```xml
   <EditText
@@ -108,9 +109,9 @@ Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
 startActivityForResult(intent, 12345);
 ```
 
-* Move the functionality for sending the email from the onClick method of the SecondActivity to the onClick method of the FirstActivity. You will have to make some little adjustments to the code.
+* Move the functionality for sending the email from the `onClick()` method of the SecondActivity to the `onClick()` method of the FirstActivity. You will have to make some little adjustments to the code.
 
-* Change the onClick method of the SecondActivity so it will return the provided email message back to the FirstActivity. Use the code below.
+* Change the `onClick()` method of the SecondActivity so it will return the provided email message back to the FirstActivity. Use the code below.
 
 ```java
 Intent intent = new Intent();
@@ -119,7 +120,7 @@ setResult(12345, intent);
 finish();
 ```
 
-* Add the onActivityResult method to the FirstActivity to handle the email message provided by the SecondActivity. Use code given below.
+* Add the `onActivityResult()` method to the FirstActivity to handle the email message provided by the SecondActivity. Use code given below.
 
 ```java
 protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -131,8 +132,10 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
-* Since we are no sending the email address and subject to the SecondActivity anymore, remove in the onCreate method of the SecondActivity the code which expects the email address and subject to be provided.
+* Since we are not sending the email address and subject to the SecondActivity anymore, remove in the SecondActivity's `onCreate()` the code which expects the email address and subject to be provided.
 
 
 ##Conclusion
-Using _implicit_ and _explicit_ **Intents** wisely will transform your app into an efficient way to perform a certain **Task**. Don't reinvent the wheel if somebody else, or a system activity can do this step in the task for you! On to [lesson 4](../section4/README.md) where you will learn about a very frequently used **View** the **ListView**.
+Using _implicit_ and _explicit_ **Intents** wisely will transform your app into an efficient way to perform a certain **Task**. Don't reinvent the wheel if somebody else, or a system activity can do this step in the task for you!
+
+On to [lesson 4](../section4/README.md), where you will learn about a very frequently used **View** the **ListView**.
