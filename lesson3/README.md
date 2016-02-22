@@ -16,7 +16,7 @@ An activity can even start activities that exist in other applications on the de
 
 When the email is sent, your activity resumes and it seems as if the email activity was part of your application. Even though the activities may be from different applications, Android maintains this seamless user experience by keeping both activities in the same task.
 
->**Task** A _task_ is a collection of activities that users interact with when performing a certain job. The activities are arranged in a stack (the "back stack"), in the order in which each activity is opened.
+>A _task_ is a collection of activities that users interact with when performing a certain job. The activities are arranged in a stack (the "back stack"), in the order in which each activity is opened.
 
 The device Home screen is the starting place for most tasks. When the user touches an icon in the application launcher (or a shortcut on the Home screen), that application's task comes to the foreground. If no task exists for the application (the application has not been used recently), then a new task is created and the "main" activity for that application opens as the root activity in the stack.
 
@@ -78,7 +78,7 @@ Implement the following code:
   * Retrieve the e-mail message from the **EditText** view.
   * Create an _implicit_ intent to send an e-mail and pass the retrieved e-mail address, subject and message in an intent extra.
 
-> Notice that you don't need any special permissions to use implicit intents to chain another activity to task. You are basically leaving the end user in control of how and what will be done with their data. They can simply cancel the e-mail composition by pressing the back button. If you want to send e-mail directly from your app, without user intervention you must at least request the [INTERNET](http://developer.android.com/reference/android/Manifest.permission.html#INTERNET) persmission and do all the SMTP preparing and sending yourself. While that's probably not what you want to do, [here's a tutorial](http://mobiledevtuts.com/android/android-sdk-smtp-email-tutorial/) which uses [JavaMail for Android](https://code.google.com/p/javamail-android/) to achieve this task.
+> Notice that you don't need any special permissions to use implicit intents to chain another activity to task. You are basically leaving the end user in control of how and what will be done with their data. They can simply cancel the e-mail composition by pressing the back button. If you want to send e-mail directly from your app, without user intervention you must at least request the [INTERNET](http://developer.android.com/reference/android/Manifest.permission.html#INTERNET) permission and do all the SMTP preparing and sending yourself. While that's probably not what you want to do, [here's a tutorial](http://mobiledevtuts.com/android/android-sdk-smtp-email-tutorial/) which uses [JavaMail for Android](https://code.google.com/p/javamail-android/) to achieve this task.
 
 ### Exercise 03.03: ADB command
 
@@ -135,4 +135,4 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 
 ##Conclusion
-Using _implicit_ and _explicit_ **Intents** wisely will transform your app into an efficient way to perform a certain **Task**. Don't reinvent the wheel if somebody else, or a system activity can do this step in the task for you! On to [lesson 4](../section4/README.md) where you will learn about a very frequenlty used **View** the **ListView**.
+Using _implicit_ and _explicit_ **Intents** wisely will transform your app into an efficient way to perform a certain **Task**. Don't reinvent the wheel if somebody else, or a system activity can do this step in the task for you! On to [lesson 4](../section4/README.md) where you will learn about a very frequently used **View** the **ListView**.
