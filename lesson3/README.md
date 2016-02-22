@@ -84,7 +84,7 @@ Implement the following code:
 
 On the command line type `adb shell dumpsys activity` and try to interpret the output.
 
-### Exercise 03.04 (bonus!): Exchanging data between Activities
+### Exercise 03.04: Exchanging data between Activities
 
 In this additional exercise we are going to change the flow of the application. FirstActivity will show the email address, subject, message and a button to send the email. SecondActivity will show a big EditText view and a 'ready' button which will send the entered message back to the FirstActivity.
 
