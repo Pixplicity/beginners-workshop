@@ -20,7 +20,7 @@ A Fragment represents a behavior or a portion of user interface in an Activity. 
 
 A fragment must always be embedded in an activity and the fragment's lifecycle is directly affected by the host activity's lifecycle. For example, when the activity is paused, so are all fragments in it, and when the activity is destroyed, so are all fragments.
 
-To create a fragment, you must create a subclass of Fragment (or an existing subclass of it). The Fragment class has code that looks a lot like an Activity. It contains callback methods similar to an activity, such as onCreate(), onStart(), onPause(), and onStop(), etc.
+To create a fragment, you must create a subclass of Fragment (or an existing subclass of it). The Fragment class has code that looks a lot like an Activity. It contains callback methods similar to an activity, such as `onCreate()`, `onStart()`, `onPause()`, and `onStop()`, etc.
 
 Usually, you should implement at least the following lifecycle methods:
 
@@ -39,7 +39,7 @@ Most applications should implement at least these three methods for every fragme
 1. Import the [lesson05](lesson05) project in Android Studio
 1. Create a new **AnimalFragment** class with a single **ImageView** which displays the image resource for the given animal.
 
-> **Tip!** You can copy the class definition below, select the `org.dutchaug.workshop.beginners.viewpager` package in Android studio and past the code. The class it automagically created for you!
+> **Tip!** You can copy the class definition below, select the `org.dutchaug.workshop.beginners.viewpager` package in Android studio and past the code. The class is automatically created for you!
 
 ```java
 import android.os.Bundle;
@@ -234,11 +234,12 @@ Revisit the `onCreate` method in the **MainActivity** and set the adapter of the
 Okay, you should have implemented enough to see the first implementation of the animal image viewer in practice. Take your project for a spin to see how it works.
 
 ## Playing an animal sound
-You might have noticed that the **Animal** data object holds a new field, `soundResource`. This field is pointing to a so callled _raw_ resource.
+
+You might have noticed that the **Animal** data object holds a new field, `soundResource`. This field is pointing to a so called _raw_ resource.
 
 > A **raw** resource is basically any binary resource you want to add to your package and use in your app. 
 
-In our case we've included ogg vorbis sound bites for every animal in the `mAnimals` data array in the **AnimalPagerAdapter** class.
+In our case we've included Ogg Vorbis sound bites for every animal in the `mAnimals` data array in the **AnimalPagerAdapter** class.
 
 ## Exercises (part 2)
 
