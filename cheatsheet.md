@@ -1,4 +1,4 @@
-#Android Cheat Sheet
+# Cheat Sheet
 
 ## Android Studio
 ### Project Structure
