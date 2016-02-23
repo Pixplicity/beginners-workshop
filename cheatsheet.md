@@ -17,7 +17,7 @@ Android Studio may ask you to choose the type of project you are importing. If t
 
 ### Dimensions: _dips_ (dp) and _sips_ (sp)
 
-You can define view widths and hights and font sizes using **px**, **dp** or **sp**.
+You can define view widths and heights and font sizes using **px**, **dp** or **sp**.
 
 **px**  
 _Pixels_ Corresponds to actual pixels on the screen.
@@ -30,7 +30,7 @@ _Scale-independent Pixels_ This is like the dp unit, but it is also scaled by th
 
 > **Tip**: Try to never use anything but sp or dp unless you absolutely have to. Using sp and dp will make your Android applications compatible with multiple screen densities and resolutions.
 
-You can resize your graphical resources with the following ratio table, or [use our handly online calculator](https://pixplicity.com/dp-px-converter/):
+You can resize your graphical resources with the following ratio table, or [use our handy online calculator](https://pixplicity.com/dp-px-converter/):
 
 | mdpi | hdpi | xhdpi | xxhdpi |
 | :--: | :--: | :---: | :----: |

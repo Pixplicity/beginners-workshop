@@ -17,3 +17,7 @@ Here is a quick overview of the contents of the workshop:
 * **[Lesson 5](lesson5/README.md)**: Creating a simple image viewer app
 
 Let's get started with [taking a detailed look at the content](contents.md).
+
+## Speaker Notes
+
+Speakers can [find the speaker notes here](https://docs.google.com/a/pixplicity.com/document/d/1b3tQJYT_5p4lU68Zxz0fvIFSU2OH6_jV7F-sdR6-heQ/edit?usp=sharing).

@@ -172,7 +172,7 @@ Every application must have an AndroidManifest.xml file (with precisely that nam
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.dutchaug.workshop.beginners.helloworld" >
+    package="com.pixplicity.workshop.beginners.helloworld">
 
     <application
         android:allowBackup="true"
@@ -181,7 +181,7 @@ Every application must have an AndroidManifest.xml file (with precisely that nam
         android:theme="@android:style/Theme.Holo.Light">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -211,14 +211,14 @@ An activity is a single, focused thing that the user can do. Almost all activiti
 
 To be of any use all activity classes must have a corresponding `<activity>` declaration in their package's `AndroidManifest.xml`.
 
-We only have one activity in our Hello World project, the **MainActivity**. Let's open up [MainActivity.java](lesson01/helloworld/src/main/java/org/dutchaug/workshop/beginners/helloworld/MainActivity.java) and see what's inside.
+We only have one activity in our Hello World project, the **MainActivity**. Let's open up [MainActivity.java](lesson01/helloworld/src/main/java/com/pixplicity/workshop/beginners/helloworld/MainActivity.java) and see what's inside.
 
 > You can quickly open a class-file by pressing `Cmd-O` on a Mac and `Ctrl-N` on a Windows or Linux machine.
 
 > **Tip:** Type `Cmd-Shift-A`/`Ctrl-Shift-A` to browse through the various keyboard shortcuts, or download a PDF file with the most common keyboard shortcuts for [Windows or Linux](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf) or [Mac OS X](http://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf).
 
 ```java
-package org.dutchaug.workshop.beginners.helloworld;
+package com.pixplicity.workshop.beginners.helloworld;
 
 import android.app.Activity;
 import android.os.Bundle;

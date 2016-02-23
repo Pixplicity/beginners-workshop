@@ -12,7 +12,7 @@ If you know all about the learning goals for this lesson move on to [lesson 5](.
 ## Introduction
 One of the most frequently used views in Android apps is the [**ListView**](http://developer.android.com/guide/topics/ui/layout/listview.html). It's also one of the more complex views and can become pretty cumbersome to work with if you don't play by the rules. Lists can be huge and its child views can be complex. If you don't _do it the right way_ your users might experience a bad performing scroll or other odd behaviour. We hope to give you a solid introduction to good use of this powerful view.
 
-## Adding a ListView to your layout.
+## Adding a ListView to your layout
 A **ListView** usually displays a (large, if not huge) list of things which you can vertically scroll. The **ListView** only holds the amount of list item plus or minus a couple more in memory. Every time you scroll, the views that scroll out of view are _recycled_ and reused for the views that are scrolling into view. 
 
 The _things_ in the list can have a custom view layout themselves. For the first example we'll simply use one of the standard layouts which you can find in the Android runtime library itself. It's the layout with id `android.R.layout.simple_list_item_1`. It's a very simple layout with just one **TextView** with id `@android:id/text1`
@@ -65,18 +65,24 @@ It's time to put the learned stuff into practice!
 1. Set the content view to the `activity_listview_in_layout.xml` layout file.
 1. Bind a local `ListView` object to the `ListView` in the layout with a `findViewById` and the id you can find in the `activity_listview_in_layout.xml` layout file.
 1. Create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](lesson04/listviews/src/main/res/values/arrays.xml))
-1. Create a new **ArrayAdapter** instance with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the **ListView** object. (At this time you should be able to see something on screen, so take your project for a spin here and click on the "ListView in layout" item)
+1. Create a new **ArrayAdapter** instance with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the **ListView** object.
+
+  At this time you should be able to see something on screen, so take your project for a spin here and click on the "ListView in layout" item.
+  
 1. **BONUS:** Create a custom list item layout, with at least one `TextView` with id `@android:id/text1`, and assign that to the `ArrayAdapter` constructor.
 
 ### Exercise 04.02: Listen for list item clicks
 
 1. From the “TODO” Tool View, double click on the `TODO Exercise 04.02` item.
 1. Again create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](sample04/listviews/src/main/res/values/arrays.xml))
-1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view via the `getListView()` method. (You should be able to see something on screen, so take your project for a spin here and click on the "ListActivity" item)
+1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view via the `getListView()` method.
+
+  At this time you should be able to see something on screen, so take your project for a spin here and click on the "ListView in layout" item.
+
 1. **BONUS:** Override the `protected void onListItemClick(ListView l, View v, int position, long id)` method and try to display the animal name via a [Toast](../cheatsheet.md#toast)
 
 ## Building a custom adapter with BaseAdapter
-Okay, a list with Strings is kind of nice as an example, but what about a list with a little bit more information. Let's say a list of animals with a thumbnail image and two textviews with the animal name and the type of animal. Something like this:
+Okay, a list with Strings is kind of nice as an example, but what about a list with a little bit more information. Let's say a list of animals with a thumbnail image and two TextViews with the animal name and the type of animal. Something like this:
 
 ![Custom adapater result](img/custom_adapter_result.png)
 
@@ -88,7 +94,7 @@ Create a new class with name `CustomAdapter` which extends the **BaseAdapter** c
 
 ![Somethings's wrong with our custom adapter](img/somethings_wrong.png)
 
-Move your cursor to the line in error an press `Alt-Enter` to see some quickfixes
+Move your cursor to the line in error an press `Alt-Enter` to see some quickfixes.
 
 ![Quick fix me please](img/quick_fix_me_please.png)
 
@@ -139,19 +145,17 @@ Okay, let's see this in action with some data.
 1. From the “TODO” Tool View, double click on the `TODO Exercise 04.03` item.
 1. Complete the `getCount()`, `getItem(int position)` and `getItemId(int position)` methods to return logical values and take your project for a spin. 
 1. In `CustomAdapterActivity` complete the `onListItemClick` method. Use the `position` to retrieve an `Animal` object from the `mCustomerAdapter` field and use the `animal.infoUrl` information to create a valid `Uri`.
+ 
+  At this time you should be able to interact with list items, so take your project for a spin here and see if a browser opens up with your URL.
+
 1. **BONUS:** Instead of using a **ListView** use a [**GridView**](http://developer.android.com/guide/topics/ui/layout/gridview.html) and the same custom adapter to create a grid of animal info.
 
 ## Conclusion
 The **ListView** and extending the **BaseAdapter** are powerful tools to create great looking lists in your app. This lesson only showed you the tip of the iceberg. There are still many things to discover for a correct and optimal implementation of great performing lists. For example: 
 
-* It is highly adviced to use the [ViewHolder pattern](http://developer.android.com/training/improving-layouts/smooth-scrolling.html#ViewHolder) for better performance. 
-* At some point in time you might want to add [sections to your list view](http://cyrilmottier.com/2011/07/05/listview-tips-tricks-2-section-your-listview/) or
-* show [multiple views types in your list](http://antew.com/?p=162).
+* For more complex things, like showing multiple view types or animating items in as they appear, change and disappear from the list, you will certainly want to look at using [the RecyclerView](http://developer.android.com/training/material/lists-cards.html).
+* It is highly advised to use the [ViewHolder pattern](http://developer.android.com/training/improving-layouts/smooth-scrolling.html#ViewHolder) for better performance (this is enforced when using RecyclerViews).
+* At some point in time you might want to add [sections to your list view](http://cyrilmottier.com/2011/07/05/listview-tips-tricks-2-section-your-listview/).
 * If you work with databases you will probably start extending the [**CursorAdapter**](http://developer.android.com/reference/android/widget/CursorAdapter.html) and you should definitely investigate the [**Loaders** pattern](http://developer.android.com/guide/components/loaders.html) for _asynchronously_ loading the data and automatically updating the list when items in the database change.
 
-On to [lesson 5](../section5/README.md) where you will learn about **Fragments**, the **ViewPager** UI pattern and playing sounds with the **MediaPlayer**.
-
-## Solutions
-* [Exercise 04.01](https://gist.github.com/dutchaug/9942397)
-* [Exercise 04.02](https://gist.github.com/dutchaug/9942560)
-* [Exercise 04.03](https://gist.github.com/dutchaug/9942707)
+On to [lesson 5](../section5/README.md), where you will learn about **Fragments**, the **ViewPager** UI pattern and playing sounds with the **MediaPlayer**.

@@ -38,4 +38,6 @@ This workshop consists of five lessons, each briefly preceded by a short classic
 * Basic Object Oriented (OO) programming
 * Basic event driven programming
 * Writing tests
-* Working with more complex concepts, such as Services, Broadcast Receivers, Databases, etc.
+* Working with more complex concepts, such as:
+ * Services, Broadcast Receivers, Databases, etc.
+ * Background tasks

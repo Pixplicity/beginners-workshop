@@ -87,7 +87,7 @@ apply plugin: 'hugo'
 
 And than add the `@DebugLog` annotation to any method you want to _debug log_.
 
-A couple of the Activity life cycle methods in the [MainActivity](lesson02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) in [lesson02](lesson02) are annotated with the `@DebugLog` annotation. Take that project for a spin to get a grasp of how your activity is managed by the system. Tip, rotate your device and see what happens. Can you explain why this happens?
+A couple of the Activity life cycle methods in the [MainActivity](lesson02/lifecyclelogger/src/main/java/com/pixplicity/workshop/beginners/lifecyclelogger/MainActivity.java) in [lesson02](lesson02) are annotated with the `@DebugLog` annotation. Take that project for a spin to get a grasp of how your activity is managed by the system. Tip, rotate your device and see what happens. Can you explain why this happens?
 
 ## Exercises
 
@@ -106,13 +106,13 @@ To get a reference to the views in the layout in your code you can create a reso
 
 Go ahead and add `android:id` attributes to the **TextView**, **EditText** and **Button** views in the [activity_main.xml](lesson02/lifecyclelogger/src/main/res/layout/activity_main.xml) file.
 
-Now open the [MainActivity](lesson02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java) file in Android Studio. When our acitivity is created (in `onCreate()`) and our contentView is set the layout in the XML file gets _inflated_ by the Android System. This basically means whatever is in the XML file will be used to create a _View hierarchy_ of plain Java objects we can interact with in our code. We can only create references to our views in the layout, if they have a proper `id`. We can reference them by calling the `findViewById(int id)` method like this.
+Now open the [MainActivity](lesson02/lifecyclelogger/src/main/java/com/pixplicity/workshop/beginners/lifecyclelogger/MainActivity.java) file in Android Studio. When our acitivity is created (in `onCreate()`) and our contentView is set the layout in the XML file gets _inflated_ by the Android System. This basically means whatever is in the XML file will be used to create a _View hierarchy_ of plain Java objects we can interact with in our code. We can only create references to our views in the layout, if they have a proper `id`. We can reference them by calling the `findViewById(int id)` method like this.
 
 ```java
 TextView textView = (TextView) findViewById(R.id.uniquenameforyourview);
 ```
 
-Go ahead and hook-up all the views in the `onCreate()` method in [MainActivity](lesson02/lifecyclelogger/src/main/java/org/dutchaug/workshop/beginners/lifecyclelogger/MainActivity.java). Make _fields_ out of the view references while you are at it, so you can reference them from other methods in your class (not just the onCreate method).
+Go ahead and hook-up all the views in the `onCreate()` method in [MainActivity](lesson02/lifecyclelogger/src/main/java/com/pixplicity/workshop/beginners/lifecyclelogger/MainActivity.java). Make _fields_ out of the view references while you are at it, so you can reference them from other methods in your class (not just the onCreate method).
 
 ### Exercise 02.03: Interacting with the views
 
@@ -145,4 +145,6 @@ The title of the MainActivity in [lesson02](lesson02) is set via the `android:la
 Try to change the background color of the MainActivity in the [activity_main.xml](sample02/lifecyclelogger/src/main/res/layout/activity_main.xml) file.
 
 ## Conclusion
-You've learned how to add more Views to your layout and how to reference and interact with them in your code. You have seen methods to log (debug) statements to Android's logcat. On to [lesson 3](../section3/README.md) where you will learn more about the activity back stack and how to move from one Activity to another with _explicit_ and _implicit_ Intents.
+You've learned how to add more Views to your layout and how to reference and interact with them in your code. You have seen methods to log (debug) statements to Android's logcat.
+
+On to [lesson 3](../section3/README.md), where you will learn more about **the activity back stack** and how to move from one Activity to another with **_explicit_ and _implicit_ Intents**.
