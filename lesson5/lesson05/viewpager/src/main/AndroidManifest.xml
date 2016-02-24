@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="org.dutchaug.workshop.beginners.viewpager">
+          package="com.pixplicity.workshop.beginners.viewpager">
 
     <!-- The android:allowBackup="true" attribute indicates whether to allow the application to participate in the backup
          and restore infrastructure. If this attribute is set to false, no backup or restore of the application will ever
