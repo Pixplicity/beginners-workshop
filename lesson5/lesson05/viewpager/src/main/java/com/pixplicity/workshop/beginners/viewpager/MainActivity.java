@@ -19,8 +19,8 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE); // Uncomment this if you want the action bar back
         super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		mViewPager = (ViewPager) findViewById(R.id.view_pager);
+        setContentView(R.layout.activity_main);
+        mViewPager = (ViewPager) findViewById(R.id.view_pager);
         // TODO Exercise 05.03 - Create an instance of AnimalPagerAdapter and assign it to mViewPager
     }
 
@@ -61,12 +61,14 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return null; // TODO Exercise 05.01 - Return a new AnimalFragment object for the given position
+            // TODO Exercise 05.01 - Return a new AnimalFragment object for the given position
+            return null;
         }
 
         @Override
         public int getCount() {
-            return 0; // TODO Exercise 05.02 - Return the amount of animals in our data set.
+            // TODO Exercise 05.02 - Return the amount of animals in our data set.
+            return 0;
         }
 
     }
