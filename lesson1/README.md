@@ -18,7 +18,7 @@ Android Studio contains a new project wizard, which is started by chosing “Fil
 
 In this lesson we are going to import a very tiny “Hello World” app. Before we do this, please clone this “beginners-workshop” Github repository to your local machine by executing the following command:
 
-    git clone git@github.com:pixplicity/beginners-workshop.git
+    git clone https://github.com/Pixplicity/beginners-workshop.git
 
 Not familiar with Git? No problem, just grab the ZIP file straight from the project page:
 
