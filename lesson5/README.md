@@ -291,11 +291,11 @@ public void playSound(int soundResource) {
 
 That's it! Take your project for a spin!
 
-### Exercise 05.04: Pausing sounds
+### Exercise 05.05: Pausing sounds
 
 When you click on an image that animal sound will be played. When it's long and you move to the next page the other animal's sound is still playing, which is kind of confusing. Add an **OnPageChangeListener** to the `mViewPager` instance in **MainActivity** and override the `public void onPageSelected(int position)` method to stop playing the currently playing sound.
 
-### Exercise 05.05: Adhering to context
+### Exercise 05.06: Adhering to context
 
 When you click on an image and hear a sound press the back or the home button. Do you still hear a sound? Can you explain what happens? Which activity life cycle method can you override to modify this behavior?
 
