@@ -76,6 +76,10 @@ If you want to run apps on your device the first thing you need to do is enable 
 
 You must also allow installation of apps from sources other than the Play Store by checking Unknown Sources in the security settings (on most phones). Now it's simply a matter of plugging in your phone and running the Android application by clicking the run button in Android Studio.
 
+#### ADB permission
+
+Now that you've When you plug in your device
+
 #### Virtual device (Emulator)
 
 Install at least one Android Virtual Device (AVD) running Lollipop for this workshop. All the capabilities of the AVD Manager are accessible directly from the Android Studio interface. Click the AVD Manager Icon ![AVD Manager Icon](img/avd-manager-studio.png) in the toolbar to open it and create new AVDs.
