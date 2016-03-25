@@ -56,16 +56,16 @@ Parameters:
 
 It's time to put the learned stuff into practice!
 
-1. Import [lesson04](lesson04) in Android Studio.
+1. Import [lesson04](lesson04) in Android Studio. 
 1. Click on the “TODO” Tool View to see all `TODO` items in the project.
 
 ### Exercise 04.01: Create a list
 
-1. From the “TODO” Tool View, double click on the `TODO Exercise 04.01` item. This opens the `ListViewInLayoutActivity.java` file at the spot where you should enter the code below.
-1. Set the content view to the `activity_listview_in_layout.xml` layout file.
-1. Bind a local `ListView` object to the `ListView` in the layout with a `findViewById` and the id you can find in the `activity_listview_in_layout.xml` layout file.
-1. Create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](lesson04/listviews/src/main/res/values/arrays.xml))
-1. Create a new **ArrayAdapter** instance with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the **ListView** object.
+1. From the “TODO” Tool View, double click on the `TODO Exercise 04.01` item. This opens the `ListViewInLayoutActivity.java` file at the spot where you should enter the code below. 
+1. Set the content view to the `activity_listview_in_layout.xml` layout file. 
+1. Bind a local `ListView` object to the `ListView` in the layout with a `findViewById` and the id you can find in the `activity_listview_in_layout.xml` layout file. 
+1. Create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](lesson04/listviews/src/main/res/values/arrays.xml)) 
+1. Create a new **ArrayAdapter** instance with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the **ListView** object. 
 
   At this time you should be able to see something on screen, so take your project for a spin here and click on the "ListView in layout" item.
   
@@ -73,13 +73,13 @@ It's time to put the learned stuff into practice!
 
 ### Exercise 04.02: Listen for list item clicks
 
-1. From the “TODO” Tool View, double click on the `TODO Exercise 04.02` item.
-1. Again create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](sample04/listviews/src/main/res/values/arrays.xml))
-1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view via the `getListView()` method.
+1. From the “TODO” Tool View, double click on the `TODO Exercise 04.02` item. 
+1. Again create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](sample04/listviews/src/main/res/values/arrays.xml)) 
+1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view via the `getListView()` method. 
 
   At this time you should be able to see something on screen, so take your project for a spin here and click on the "ListView in layout" item.
 
-1. **BONUS:** Override the `protected void onListItemClick(ListView l, View v, int position, long id)` method and try to display the animal name via a [Toast](../cheatsheet.md#toast)
+1. **BONUS:** Override the `protected void onListItemClick(ListView l, View v, int position, long id)` method and try to display the animal name via a [Toast](../cheatsheet.md#toast) 
 
 ## Building a custom adapter with BaseAdapter
 Okay, a list with Strings is kind of nice as an example, but what about a list with a little bit more information. Let's say a list of animals with a thumbnail image and two TextViews with the animal name and the type of animal. Something like this:
@@ -142,12 +142,8 @@ Okay, let's see this in action with some data.
 
 ### Exercise 04.03: Implement the CustomAdapter
 
-1. From the “TODO” Tool View, navigate to both items described as `TODO Exercise 04.03`. 
-
+1. From the “TODO” Tool View, double click on the `TODO Exercise 04.03` item.
 1. Complete the `getCount()`, `getItem(int position)` and `getItemId(int position)` methods to return logical values and take your project for a spin. 
-
-  For our purposes, we don't need a unique ID for each row, so you can return `0` as the item ID.
-
 1. In `CustomAdapterActivity` complete the `onListItemClick` method. Use the `position` to retrieve an `Animal` object from the `mCustomerAdapter` field and use the `animal.infoUrl` information to create a valid `Uri`.
  
   At this time you should be able to interact with list items, so take your project for a spin here and see if a browser opens up with your URL.
