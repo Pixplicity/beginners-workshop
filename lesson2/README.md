@@ -135,7 +135,12 @@ By default you get this standard app launch icon for new Android projects:
 ![Default launch icon](img/ic_launcher.png)
 > Default launch icon
 
-Use the [Android Asset Studio](http://android-ui-utils.googlecode.com/hg/asset-studio/dist/icons-launcher.html#foreground.type=clipart&foreground.space.trim=1&foreground.space.pad=0&foreground.clipart=res%2Fclipart%2Ficons%2Fsocial_send_now.svg&foreColor=c00%2C0&crop=0&backgroundShape=bevel&backColor=ffffff%2C100) to create a new launch icon, or use the built-in image resource generator to create one directly inside Android Studio.
+ Use Android Studio's built-in image resource generator to create a new launch icon.
+
+![Default launch icon](img/as-create-image-asset.png)
+> Android Studio's image asset generator
+
+You can also use the online [Android Asset Studio](http://android-ui-utils.googlecode.com/hg/asset-studio/dist/icons-launcher.html#foreground.type=clipart&foreground.space.trim=1&foreground.space.pad=0&foreground.clipart=res%2Fclipart%2Ficons%2Fsocial_send_now.svg&foreColor=c00%2C0&crop=0&backgroundShape=bevel&backColor=ffffff%2C100).
 
 ### Exercise 02.05: Change the Activity title
 The title of the MainActivity in [lesson02](lesson02) is set via the `android:label="@string/app_name"` attribute in the [AndroidManifest.xml](lesson02/lifecyclelogger/src/main/AndroidManifest.xml) file. Use another string and try to change the title of the MainActivity class in the `onCreate()` method.
@@ -147,4 +152,4 @@ Try to change the background color of the MainActivity in the [activity_main.xml
 ## Conclusion
 You've learned how to add more Views to your layout and how to reference and interact with them in your code. You have seen methods to log (debug) statements to Android's logcat.
 
-On to [lesson 3](../section3/README.md), where you will learn more about **the activity back stack** and how to move from one Activity to another with **_explicit_ and _implicit_ Intents**.
+On to [lesson 3](../lesson3/README.md), where you will learn more about **the activity back stack** and how to move from one Activity to another with **_explicit_ and _implicit_ Intents**.
