@@ -116,7 +116,7 @@ startActivityForResult(intent, 12345);
 ```java
 Intent intent = new Intent();
 intent.putExtra("message", mEmailMessage.getText().toString());
-setResult(12345, intent);
+setResult(RESULT_OK, intent);
 finish();
 ```
 
