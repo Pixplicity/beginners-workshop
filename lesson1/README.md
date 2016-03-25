@@ -12,7 +12,7 @@ If you know all about the learning goals for this lesson move on to [lesson 2](.
 ## Android Studio
 
 ### Importing an Android project in Android Studio
-Android Studio contains a new project wizard, which is started by chosing “File” → “New Project…”. While convenient, it also asks you with a lot of questions, settings and steps which might be a bit too overwhelming at this point. For this workshop we'll only focus on ipmorting an existing Android project.
+Android Studio contains a new project wizard, which is started by choosing “File” → “New Project…”. While convenient, it also asks you with a lot of questions, settings and steps which might be a bit too overwhelming at this point. For this workshop we'll only focus on importing an existing Android project.
 
 #### 1. Getting the lesson content
 
