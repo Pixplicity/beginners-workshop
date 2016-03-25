@@ -62,9 +62,13 @@ It's time to put the learned stuff into practice!
 ### Exercise 04.01: Create a list
 
 1. From the “TODO” Tool View, double click on the `TODO Exercise 04.01` item. This opens the `ListViewInLayoutActivity.java` file at the spot where you should enter the code below. 
+
 1. Set the content view to the `activity_listview_in_layout.xml` layout file. 
+
 1. Bind a local `ListView` object to the `ListView` in the layout with a `findViewById` and the id you can find in the `activity_listview_in_layout.xml` layout file. 
+
 1. Create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](lesson04/listviews/src/main/res/values/arrays.xml)) 
+
 1. Create a new **ArrayAdapter** instance with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the **ListView** object. 
 
   At this time you should be able to see something on screen, so take your project for a spin here and click on the "ListView in layout" item.
@@ -74,7 +78,9 @@ It's time to put the learned stuff into practice!
 ### Exercise 04.02: Listen for list item clicks
 
 1. From the “TODO” Tool View, double click on the `TODO Exercise 04.02` item. 
+
 1. Again create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](sample04/listviews/src/main/res/values/arrays.xml)) 
+
 1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view via the `getListView()` method. 
 
   At this time you should be able to see something on screen, so take your project for a spin here and click on the "ListView in layout" item.
