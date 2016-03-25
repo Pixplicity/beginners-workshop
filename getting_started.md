@@ -88,4 +88,4 @@ Install at least one Android Virtual Device (AVD) running Lollipop for this work
 
 Once you've installed all the software, necessary development kits and set up a device, you are all set for the workshop!
 
-You may want to keep this [cheatsheet](cheatsheet.md) at hand. Now let's [go to lesson 1](lesson1)!
+You may want to keep this [cheatsheet](cheatsheet.md) at hand. Now let's [go to lesson 1](lesson1/README.md)!
