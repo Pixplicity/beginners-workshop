@@ -2,7 +2,7 @@
 
 Thanks for signing up for the Android Beginners workshop!
 
-This document is best viewed as a GitBook; [view it online here](https://pixplicity.gitbooks.io/android-beginners-workshop/).
+This document is best viewed as a GitBook; [view it online here](https://pixplicity.gitbooks.io/beginners-workshop/).
 
 ## Contents
 
