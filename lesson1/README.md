@@ -338,4 +338,4 @@ Create a new resource file with name `res/drawable/background.xml` and add the x
 > Creating [shape drawables](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) (as they are called) in XML is a very powerful tool in Android. [This online tool](http://angrytools.com/gradient/) can create gradient XML files for you. Simply click the “Android” tab at the bottom to get the generated XML.
 
 ##Conclusion
-This simple hello world app is only scratching the surface of what Android can do, but it gives you great insight in how Android Studio works. On to [lesson 2](../section2/README.md) where you will learn more about **Activities** and **the Activity Life Cycle**, more Views and how to **interact with Views** in your code.
+This simple hello world app is only scratching the surface of what Android can do, but it gives you great insight in how Android Studio works. On to [lesson 2](../lesson2/README.md) where you will learn more about **Activities** and **the Activity Life Cycle**, more Views and how to **interact with Views** in your code.
