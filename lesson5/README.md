@@ -293,7 +293,9 @@ That's it! Take your project for a spin!
 
 ### Exercise 05.05: Pausing sounds
 
-When you click on an image that animal sound will be played. When it's long and you move to the next page the other animal's sound is still playing, which is kind of confusing. Add an **OnPageChangeListener** to the `mViewPager` instance in **MainActivity** and override the `public void onPageSelected(int position)` method to stop playing the currently playing sound.
+When you click on an image that animal sound will be played. When it's long and you move to the next page the other animal's sound is still playing, which is kind of confusing. Add a **ViewPager.OnPageChangeListener** to the `mViewPager` instance in **MainActivity** and override the `public void onPageSelected(int position)` method to stop playing the currently playing sound.
+
+Note that you will need to take a similar approach for providing the sound resource as what has been done for you with image resources.
 
 ### Exercise 05.06: Adhering to context
 
