@@ -142,8 +142,12 @@ Okay, let's see this in action with some data.
 
 ### Exercise 04.03: Implement the CustomAdapter
 
-1. From the “TODO” Tool View, double click on the `TODO Exercise 04.03` item.
+1. From the “TODO” Tool View, navigate to both items described as `TODO Exercise 04.03`. 
+
 1. Complete the `getCount()`, `getItem(int position)` and `getItemId(int position)` methods to return logical values and take your project for a spin. 
+
+  For our purposes, we don't need a unique ID for each row, so you can return `0` as the item ID.
+
 1. In `CustomAdapterActivity` complete the `onListItemClick` method. Use the `position` to retrieve an `Animal` object from the `mCustomerAdapter` field and use the `animal.infoUrl` information to create a valid `Uri`.
  
   At this time you should be able to interact with list items, so take your project for a spin here and see if a browser opens up with your URL.
