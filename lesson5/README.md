@@ -6,7 +6,7 @@
 * Playing sounds with the **MediaPlayer**.
 
 ## Introduction
-In the [previous lesson](../section4/README.md) you learned about the [**ListView**](http://developer.android.com/guide/topics/ui/layout/listview.html). This is a vertically scrolling list of items which fluently scrolls up and down. There is no horizontal **ListView** in the Android SDK, but if you Google for this you will find many open source implementations of views doing exactly this. The [TwoWayView](https://github.com/lucasr/twoway-view) is one of these open source implementations which can horizontally scroll a list of items. However, if you want to horizontally scroll a generic view which is larger than the screen width you can wrap a **ViewGroup** in a [**HorizontalScrollView**](http://developer.android.com/reference/android/widget/HorizontalScrollView.html), which _is_ a standard view.
+In the [previous lesson](../lesson4/README.md) you learned about the [**ListView**](http://developer.android.com/guide/topics/ui/layout/listview.html). This is a vertically scrolling list of items which fluently scrolls up and down. There is no horizontal **ListView** in the Android SDK, but if you Google for this you will find many open source implementations of views doing exactly this. The [TwoWayView](https://github.com/lucasr/twoway-view) is one of these open source implementations which can horizontally scroll a list of items. However, if you want to horizontally scroll a generic view which is larger than the screen width you can wrap a **ViewGroup** in a [**HorizontalScrollView**](http://developer.android.com/reference/android/widget/HorizontalScrollView.html), which _is_ a standard view.
 
 In many apps you see another horizontal scroll UI pattern where you can swipe a single _page_. When you drag the view left or right the next view comes into view and when you release the view the control snaps to the _nearest_ view. When you _fling_ it quickly snaps to the next page, but never more than one. (If you fling a **ListView** or a **SrollView** in general it will simple scroll on and slow down and eventually stop at some position).
 
@@ -217,7 +217,7 @@ public Fragment getItem(int position) {
 ### Exercise 05.02: Show a number of pages
 
 1. From the “TODO” Tool View, double click on the `TODO Exercise 05.02` item.
-1. The **PagerAdapater** itself is an abstract class as well, which in turn asks us to implement the `getCount()` method we saw in [lesson 4](../section4).
+1. The **PagerAdapater** itself is an abstract class as well, which in turn asks us to implement the `getCount()` method we saw in [lesson 4](../lesson4).
 ```java
 @Override
 public int getCount() {
