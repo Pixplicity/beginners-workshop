@@ -7,7 +7,7 @@
 * Extending the **BaseAdapter** to create a custom adapter,
 * Creating more complex layouts for the list items.
 
-If you know all about the learning goals for this lesson move on to [lesson 5](../section5/README.md).
+If you know all about the learning goals for this lesson move on to [lesson 5](../lesson5/README.md).
 
 ## Introduction
 One of the most frequently used views in Android apps is the [**ListView**](http://developer.android.com/guide/topics/ui/layout/listview.html). It's also one of the more complex views and can become pretty cumbersome to work with if you don't play by the rules. Lists can be huge and its child views can be complex. If you don't _do it the right way_ your users might experience a bad performing scroll or other odd behaviour. We hope to give you a solid introduction to good use of this powerful view.
@@ -158,4 +158,4 @@ The **ListView** and extending the **BaseAdapter** are powerful tools to create 
 * At some point in time you might want to add [sections to your list view](http://cyrilmottier.com/2011/07/05/listview-tips-tricks-2-section-your-listview/).
 * If you work with databases you will probably start extending the [**CursorAdapter**](http://developer.android.com/reference/android/widget/CursorAdapter.html) and you should definitely investigate the [**Loaders** pattern](http://developer.android.com/guide/components/loaders.html) for _asynchronously_ loading the data and automatically updating the list when items in the database change.
 
-On to [lesson 5](../section5/README.md), where you will learn about **Fragments**, the **ViewPager** UI pattern and playing sounds with the **MediaPlayer**.
+On to [lesson 5](../lesson5/README.md), where you will learn about **Fragments**, the **ViewPager** UI pattern and playing sounds with the **MediaPlayer**.
