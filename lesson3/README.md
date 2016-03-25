@@ -138,4 +138,4 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 ##Conclusion
 Using _implicit_ and _explicit_ **Intents** wisely will transform your app into an efficient way to perform a certain **Task**. Don't reinvent the wheel if somebody else, or a system activity can do this step in the task for you!
 
-On to [lesson 4](../section4/README.md), where you will learn about a very frequently used **View** the **ListView**.
+On to [lesson 4](../lesson4/README.md), where you will learn about a very frequently used **View** the **ListView**.
