@@ -6,7 +6,7 @@
 * Becoming familiar with **common Views** or _widgets_ and how to add them to an Activity,
 * Interacting with these views in your code, such as **listen to events**.
 
-If you know all about the learning goals for this lesson move on to [lesson 3](../section3/README.md).
+If you know all about the learning goals for this lesson move on to [lesson 3](../lesson3/README.md).
 
 ## Activities
 An activity usually is a full Android screen that a user sees or interacts with. The `onCreate()` method you saw in the MainActivity in lesson 1 is what we call a _life cycle callback_ method and this gives you a hook where you can initialize your activity when the Android system decides it is time to show your activity to the user. The [Activity life cycle](http://developer.android.com/reference/android/app/Activity.html#ActivityLifecycle) is very important and deserves good understanding when you are planning to do more Android development after this workshop.
