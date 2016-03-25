@@ -7,7 +7,7 @@
   * Knowing where the Java source files are located,
   * Understanding the basics of resources, such as **shape drawables**.
   
-If you know all about the learning goals for this lesson move on to [lesson 2](../section2/README.md).
+If you know all about the learning goals for this lesson move on to [lesson 2](../lesson2/README.md).
 
 ## Android Studio
 
@@ -206,7 +206,7 @@ The manifest file presents essential information about your app to the Android s
 
 An activity is a single, focused thing that the user can do. Almost all activities interact with the user, so the Activity class takes care of creating a window for you in which you can place your UI with `setContentView(View)`. There are two methods almost all subclasses of Activity will implement:
 
-* `onCreate(Bundle)` is where you initialize your activity. Most importantly, here you will usually call `setContentView(int)` with a layout resource defining your UI, and using `findViewById(int)` to retrieve the widgets in that UI that you need to interact with programmatically. More on that in [lesson 2](../section2).
+* `onCreate(Bundle)` is where you initialize your activity. Most importantly, here you will usually call `setContentView(int)` with a layout resource defining your UI, and using `findViewById(int)` to retrieve the widgets in that UI that you need to interact with programmatically. More on that in [lesson 2](../lesson2).
 * `onPause()` is where you deal with the user leaving your activity. Most importantly, any changes made by the user should at this point be saved.
 
 To be of any use all activity classes must have a corresponding `<activity>` declaration in their package's `AndroidManifest.xml`.
@@ -234,7 +234,7 @@ public class MainActivity extends Activity {
 }
 ```
 
-The `onCreate()` method is one of the _Activity Life Cycle_ methods (more on that in [section2](../section2)). In plain English, when our activity is created (by the Android system) we don't do anything with the saved instance state (whatever that is, we simply propagate it up to our super class) and set the content view layout to **R.layout.activity_main**.
+The `onCreate()` method is one of the _Activity Life Cycle_ methods (more on that in [lesson 2](../lesson2)). In plain English, when our activity is created (by the Android system) we don't do anything with the saved instance state (whatever that is, we simply propagate it up to our super class) and set the content view layout to **R.layout.activity_main**.
 
 `R.layout.activity_main` refers to an integer in a generated class with name **R**. Go ahead, open `R.java` and see what's inside. See anything familiar? Browse around the `res` folder. See something familiar? Android keeps references of all the resources in the `res` directory and saves references to these files as public static final integers in the R.java file. Again, this file is generated, so don't change anything in this file directly, change the file name (or its contents) in the `res` directory instead.
 
