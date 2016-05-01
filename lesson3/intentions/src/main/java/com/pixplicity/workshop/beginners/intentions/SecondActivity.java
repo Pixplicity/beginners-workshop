@@ -1,6 +1,8 @@
 package com.pixplicity.workshop.beginners.intentions;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -53,7 +55,19 @@ public class SecondActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        // TODO Exercise 3.2
+        // Exercise 3.2
+
+        String emailMessage = mEmailMessage.getText().toString();
+
+        Intent intent = new Intent(
+                Intent.ACTION_SENDTO,
+                Uri.parse("mailto:" + mEmailAddress));
+        intent.putExtra(Intent.EXTRA_SUBJECT,
+                mEmailSubject);
+        intent.putExtra(Intent.EXTRA_TEXT,
+                emailMessage);
+        startActivity(Intent.createChooser(intent,
+                "Send mail…"));
     }
 
 }
