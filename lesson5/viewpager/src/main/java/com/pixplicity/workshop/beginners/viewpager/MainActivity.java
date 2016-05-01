@@ -1,5 +1,6 @@
 package com.pixplicity.workshop.beginners.viewpager;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -11,9 +12,11 @@ import android.view.Window;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity implements AnimalFragment.Contract {
 
     private ViewPager mViewPager;
+
+    private MediaPlayer mMediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,19 @@ public class MainActivity extends FragmentActivity {
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
         // Exercise 5.3: Create an instance of AnimalPagerAdapter and assign it to mViewPager
         mViewPager.setAdapter(new AnimalPagerAdapter(getSupportFragmentManager()));
+    }
+
+    @Override
+    public void playSound(int soundResource) {
+        // When we've previously created a MediaPlayer object
+        if (mMediaPlayer != null) {
+            // Stop playing the previous sound
+            mMediaPlayer.release();
+        }
+        // Create a new MediaPlayer object for the given sound resource
+        mMediaPlayer = MediaPlayer.create(this, soundResource);
+        // Start playback
+        mMediaPlayer.start();
     }
 
     public class AnimalPagerAdapter extends FragmentPagerAdapter {
