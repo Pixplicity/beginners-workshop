@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Intentions</string>
+    <string name="app_name">PixAcad Intentions</string>
 
     <string name="email_address">E-mail</string>
     <string name="email_subject">Subject</string>
