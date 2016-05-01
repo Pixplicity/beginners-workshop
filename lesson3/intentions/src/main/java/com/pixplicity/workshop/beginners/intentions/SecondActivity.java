@@ -34,7 +34,7 @@ public class SecondActivity extends Activity implements View.OnClickListener {
         }
 
         if (TextUtils.isEmpty(mEmailAddress) || TextUtils.isEmpty(mEmailSubject)) {
-            throw new RuntimeException("The e-mail address and e-mail subject must both be passed as a String Intent Extra");
+            throw new RuntimeException("The e-mail address and e-mail subject must both be passed as String extras to the Intent");
         }
 
         mEmailMessage = (EditText) findViewById(R.id.email_message);
