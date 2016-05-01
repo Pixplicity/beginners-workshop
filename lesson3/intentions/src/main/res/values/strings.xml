@@ -7,6 +7,6 @@
     <string name="email_subject">Subject</string>
     <string name="email_message">Message</string>
 
-    <string name="next">Next</string>
+    <string name="done">Done</string>
 
 </resources>

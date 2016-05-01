@@ -21,11 +21,21 @@
         android:hint="@string/email_subject"
         android:inputType="textEmailSubject"/>
 
+    <EditText
+        android:id="@+id/email_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:focusable="false"
+        android:gravity="top"
+        android:hint="@string/email_message"
+        android:lines="3"/>
+
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:text="@string/next"/>
+        android:text="@string/done"/>
 
 </LinearLayout>
