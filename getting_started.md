@@ -72,7 +72,11 @@ If you want to run apps on your device the first thing you need to do is enable 
 
 #### ADB permission
 
-Now that you've When you plug in your device
+Now that you've enabled the developer settings, you need to make sure your laptop or computer is authorized to use your device. When you plug in your device, you should get a dialog on your device:
+
+![Allow USB debugging?](img/usb-debugging-allow.png)
+
+If you intend to use your device with your computer more frequently, tick "Always allow from this computer" and press OK.
 
 #### Virtual device (Emulator)
 
