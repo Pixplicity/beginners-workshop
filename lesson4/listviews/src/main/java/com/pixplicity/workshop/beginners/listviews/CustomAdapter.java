@@ -48,22 +48,21 @@ public class CustomAdapter extends BaseAdapter {
         mData.add(new Animal("Wolf", "Mammal", R.drawable.wolf_thumb, R.drawable.wolf, "http://a-z-animals.com/animals/wolf/"));
     }
 
-    // TODO Exercise 04.03
     @Override
     public int getCount() {
-        // TODO Return the number of items in our adapter
+        // TODO Exercise 4.3: Return the number of items in our adapter
         return 0;
     }
 
     @Override
     public Object getItem(int position) {
-        // TODO Retrieve the correct animal and return it
+        // TODO Exercise 4.3: Retrieve the correct animal and return it
         return null;
     }
 
     @Override
     public long getItemId(int position) {
-        // TODO What would be a good value to return here?
+        // TODO Exercise 4.3: What would be a good value to return here?
         return 0;
     }
 

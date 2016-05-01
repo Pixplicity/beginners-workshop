@@ -8,7 +8,7 @@ public class ListViewInLayoutActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // TODO Exercise 04.01
+        // TODO Exercise 4.1
     }
 
 }

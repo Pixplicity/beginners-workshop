@@ -20,7 +20,7 @@ public class CustomAdapterActivity extends ListActivity {
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
-        // TODO Exercise 04.03
+        // TODO Exercise 4.3
         Uri uri = null;
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);

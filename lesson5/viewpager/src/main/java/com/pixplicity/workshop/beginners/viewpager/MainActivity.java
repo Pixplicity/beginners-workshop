@@ -21,7 +21,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
-        // TODO Exercise 05.03 - Create an instance of AnimalPagerAdapter and assign it to mViewPager
+        // TODO Exercise 5.3: Create an instance of AnimalPagerAdapter and assign it to mViewPager
     }
 
     public class AnimalPagerAdapter extends FragmentPagerAdapter {
@@ -61,13 +61,13 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            // TODO Exercise 05.01 - Return a new AnimalFragment object for the given position
+            // TODO Exercise 5.1: Return a new AnimalFragment object for the given position
             return null;
         }
 
         @Override
         public int getCount() {
-            // TODO Exercise 05.02 - Return the amount of animals in our data set.
+            // TODO Exercise 5.2: Return the amount of animals in our data set.
             return 0;
         }
 
