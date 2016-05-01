@@ -26,6 +26,33 @@ public class MainActivity extends FragmentActivity implements AnimalFragment.Con
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
         // Exercise 5.3: Create an instance of AnimalPagerAdapter and assign it to mViewPager
         mViewPager.setAdapter(new AnimalPagerAdapter(getSupportFragmentManager()));
+        // Exercise 5.5: Pausing sounds when flipping pages
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (mMediaPlayer != null) {
+                    mMediaPlayer.release();
+                    mMediaPlayer = null;
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mMediaPlayer != null) {
+            mMediaPlayer.release();
+            mMediaPlayer = null;
+        }
     }
 
     @Override
