@@ -25,6 +25,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mEditText = (EditText) findViewById(R.id.editText);
         mButton = (Button) findViewById(R.id.button);
         mButton.setOnClickListener(this);
+
+        setTitle(R.string.hello);
     }
 
     @DebugLog
