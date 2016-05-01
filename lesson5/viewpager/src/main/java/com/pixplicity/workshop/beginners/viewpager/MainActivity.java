@@ -34,6 +34,7 @@ public class MainActivity extends FragmentActivity implements AnimalFragment.Con
         if (mMediaPlayer != null) {
             // Stop playing the previous sound
             mMediaPlayer.release();
+            mMediaPlayer = null;
         }
         // Create a new MediaPlayer object for the given sound resource
         mMediaPlayer = MediaPlayer.create(this, soundResource);
