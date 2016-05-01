@@ -63,7 +63,7 @@ startActivity(Intent.createChooser(intent, "Send mail…"));
 
 ![TO DO](img/todo.png)
 
-1. Import the [lesson03](lesson03) project in Android Studio.
+1. Import the `lesson3` project in Android Studio.
 1. Click on the “TODO” Tool View and locate the `TODO` items.
 1. Double-click on one to navigate to the code and implement the exercises.
 

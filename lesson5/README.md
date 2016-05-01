@@ -36,7 +36,7 @@ Most applications should implement at least these three methods for every fragme
 [More info](http://developer.android.com/guide/components/fragments.html)
 
 ##Fragment state
-1. Import the [lesson05](lesson05) project in Android Studio
+1. Import the `lesson5` project into Android Studio
 1. Create a new **AnimalFragment** class with a single **ImageView** which displays the image resource for the given animal.
 
 > **Tip!** You can copy the class definition below, select the `com.pixplicity.workshop.beginners.viewpager` package in Android studio and past the code. The class is automatically created for you!
@@ -200,7 +200,7 @@ The **FragmentPagerAdapter** is an abstract class which asks us to implement one
 
 ## Exercises (part 1)
 
-1. Import [lesson05](lesson05) in Android Studio.
+1. Import the `lesson5` project into Android Studio.
 1. Click on the “TODO” Tool View to see all `TODO` items in the project.
 
 ### Exercise 05.01: Creating a Fragment

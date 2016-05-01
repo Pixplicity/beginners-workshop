@@ -87,13 +87,13 @@ apply plugin: 'hugo'
 
 And than add the `@DebugLog` annotation to any method you want to _debug log_.
 
-A couple of the Activity life cycle methods in the [MainActivity](lesson02/lifecyclelogger/src/main/java/com/pixplicity/workshop/beginners/lifecyclelogger/MainActivity.java) in [lesson02](lesson02) are annotated with the `@DebugLog` annotation. Take that project for a spin to get a grasp of how your activity is managed by the system. Tip, rotate your device and see what happens. Can you explain why this happens?
+A couple of the Activity life cycle methods in the [MainActivity](lifecyclelogger/src/main/java/com/pixplicity/workshop/beginners/lifecyclelogger/MainActivity.java) in this lesson are annotated with the `@DebugLog` annotation. Take that project for a spin to get a grasp of how your activity is managed by the system. Tip, rotate your device and see what happens. Can you explain why this happens?
 
 ## Exercises
 
 ### Exercise 02.01: Adding new views to the layout
 
-Open the [activity_main.xml](lesson02/lifecyclelogger/src/main/res/layout/activity_main.xml) file in the [lesson02](lesson02) project in Android Studio and click on the **Design** tab next to the **Text** tab below. You should see something like this.
+Open the [activity_main.xml](lifecyclelogger/src/main/res/layout/activity_main.xml) file in the `lesson2` project in Android Studio and click on the **Design** tab next to the **Text** tab below. You should see something like this.
 
 ![Android Design Tool View](img/as-design-tool-view.png)
 > Android Design Tool View
@@ -104,15 +104,15 @@ On the left you see a long list of **Views** or _widgets_. Grab a **Person Name*
 
 To get a reference to the views in the layout in your code you can create a resource-id for every view you want to interact with. Creating an id is done by adding an `android:id` attribute to the views and giving them an (e.g.) `@+id/uniquenameforyourview` value. The "@"-sign identifies a resource (we already saw references to string resources via `@string/app_name` for instance). The "+"-sign just before the **id** indicates we want to _create_ and id. If we forget the "+"-sign the `@id/uniquenameforyourview` becomes a _reference_.
 
-Go ahead and add `android:id` attributes to the **TextView**, **EditText** and **Button** views in the [activity_main.xml](lesson02/lifecyclelogger/src/main/res/layout/activity_main.xml) file.
+Go ahead and add `android:id` attributes to the **TextView**, **EditText** and **Button** views in the [activity_main.xml](lifecyclelogger/src/main/res/layout/activity_main.xml) file.
 
-Now open the [MainActivity](lesson02/lifecyclelogger/src/main/java/com/pixplicity/workshop/beginners/lifecyclelogger/MainActivity.java) file in Android Studio. When our acitivity is created (in `onCreate()`) and our contentView is set the layout in the XML file gets _inflated_ by the Android System. This basically means whatever is in the XML file will be used to create a _View hierarchy_ of plain Java objects we can interact with in our code. We can only create references to our views in the layout, if they have a proper `id`. We can reference them by calling the `findViewById(int id)` method like this.
+Now open the [MainActivity](lifecyclelogger/src/main/java/com/pixplicity/workshop/beginners/lifecyclelogger/MainActivity.java) file in Android Studio. When our acitivity is created (in `onCreate()`) and our contentView is set the layout in the XML file gets _inflated_ by the Android System. This basically means whatever is in the XML file will be used to create a _View hierarchy_ of plain Java objects we can interact with in our code. We can only create references to our views in the layout, if they have a proper `id`. We can reference them by calling the `findViewById(int id)` method like this.
 
 ```java
 TextView textView = (TextView) findViewById(R.id.uniquenameforyourview);
 ```
 
-Go ahead and hook-up all the views in the `onCreate()` method in [MainActivity](lesson02/lifecyclelogger/src/main/java/com/pixplicity/workshop/beginners/lifecyclelogger/MainActivity.java). Make _fields_ out of the view references while you are at it, so you can reference them from other methods in your class (not just the onCreate method).
+Go ahead and hook-up all the views in the `onCreate()` method in [MainActivity](lifecyclelogger/src/main/java/com/pixplicity/workshop/beginners/lifecyclelogger/MainActivity.java). Make _fields_ out of the view references while you are at it, so you can reference them from other methods in your class (not just the onCreate method).
 
 ### Exercise 02.03: Interacting with the views
 
@@ -143,11 +143,11 @@ By default you get this standard app launch icon for new Android projects:
 You can also use the online [Android Asset Studio](http://android-ui-utils.googlecode.com/hg/asset-studio/dist/icons-launcher.html#foreground.type=clipart&foreground.space.trim=1&foreground.space.pad=0&foreground.clipart=res%2Fclipart%2Ficons%2Fsocial_send_now.svg&foreColor=c00%2C0&crop=0&backgroundShape=bevel&backColor=ffffff%2C100).
 
 ### Exercise 02.05: Change the Activity title
-The title of the MainActivity in [lesson02](lesson02) is set via the `android:label="@string/app_name"` attribute in the [AndroidManifest.xml](lesson02/lifecyclelogger/src/main/AndroidManifest.xml) file. Use another string and try to change the title of the MainActivity class in the `onCreate()` method.
+The title of the MainActivity is set via the `android:label="@string/app_name"` attribute in the [AndroidManifest.xml](lifecyclelogger/src/main/AndroidManifest.xml) file. Use another string and try to change the title of the MainActivity class in the `onCreate()` method.
 
 ### Exercise 02.06: Change the background color
 
-Try to change the background color of the MainActivity in the [activity_main.xml](sample02/lifecyclelogger/src/main/res/layout/activity_main.xml) file.
+Try to change the background color of the MainActivity in the [activity_main.xml](lifecyclelogger/src/main/res/layout/activity_main.xml) file.
 
 ## Conclusion
 You've learned how to add more Views to your layout and how to reference and interact with them in your code. You have seen methods to log (debug) statements to Android's logcat.

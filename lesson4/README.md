@@ -56,7 +56,7 @@ Parameters:
 
 It's time to put the learned stuff into practice!
 
-1. Import [lesson04](lesson04) in Android Studio. 
+1. Import `lesson4` into Android Studio. 
 1. Click on the “TODO” Tool View to see all `TODO` items in the project.
 
 ### Exercise 04.01: Create a list
@@ -67,7 +67,7 @@ It's time to put the learned stuff into practice!
 
 1. Bind a local `ListView` object to the `ListView` in the layout with a `findViewById` and the id you can find in the `activity_listview_in_layout.xml` layout file. 
 
-1. Create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](lesson04/listviews/src/main/res/values/arrays.xml)) 
+1. Create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](listviews/src/main/res/values/arrays.xml)) 
 
 1. Create a new **ArrayAdapter** instance with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the **ListView** object. 
 
@@ -79,7 +79,7 @@ It's time to put the learned stuff into practice!
 
 1. From the “TODO” Tool View, double click on the `TODO Exercise 04.02` item. 
 
-1. Again create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](sample04/listviews/src/main/res/values/arrays.xml)) 
+1. Again create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](listviews/src/main/res/values/arrays.xml)) 
 
 1. Create a new array adapter with layout id `android.R.layout.simple_list_item_1` and assign this adapter to the list view via the `getListView()` method. 
 
