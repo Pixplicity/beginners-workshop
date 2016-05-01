@@ -91,7 +91,7 @@ A couple of the Activity life cycle methods in the [MainActivity](lifecyclelogge
 
 ## Exercises
 
-### Exercise 02.01: Adding new views to the layout
+### Exercise 2.1: Adding new views to the layout
 
 Open the [activity_main.xml](lifecyclelogger/src/main/res/layout/activity_main.xml) file in the `lesson2` project in Android Studio and click on the **Design** tab next to the **Text** tab below. You should see something like this.
 
@@ -100,7 +100,7 @@ Open the [activity_main.xml](lifecyclelogger/src/main/res/layout/activity_main.x
 
 On the left you see a long list of **Views** or _widgets_. Grab a **Person Name** from the **Text Fields** section and place it under the **TextView** view. Grab a **Button** from the **Widgets** section and place it under the **EditText** view.
 
-### Exercise 02.02: Referencing views in the layout in your code
+### Exercise 2.2: Referencing views in the layout in your code
 
 To get a reference to the views in the layout in your code you can create a resource-id for every view you want to interact with. Creating an id is done by adding an `android:id` attribute to the views and giving them an (e.g.) `@+id/uniquenameforyourview` value. The "@"-sign identifies a resource (we already saw references to string resources via `@string/app_name` for instance). The "+"-sign just before the **id** indicates we want to _create_ and id. If we forget the "+"-sign the `@id/uniquenameforyourview` becomes a _reference_.
 
@@ -114,7 +114,7 @@ TextView textView = (TextView) findViewById(R.id.uniquenameforyourview);
 
 Go ahead and hook-up all the views in the `onCreate()` method in [MainActivity](lifecyclelogger/src/main/java/com/pixplicity/workshop/beginners/lifecyclelogger/MainActivity.java). Make _fields_ out of the view references while you are at it, so you can reference them from other methods in your class (not just the onCreate method).
 
-### Exercise 02.03: Interacting with the views
+### Exercise 2.3: Interacting with the views
 
 You can [click on any view](http://developer.android.com/reference/android/view/View.html#setOnClickListener(android.view.View.OnClickListener) in Android, but **Buttons** are, of course, the ideal things to click on. You can listen to a button click by implementing- and adding a **View.OnClickListener** to your button.
 
@@ -128,7 +128,7 @@ What we are saying here is that our **MainActivity** should implement the **View
 
 Now in the `onClick(View v)` method try to read the value from the **EditText** reference and use that value to update the **TextView** reference.
 
-### Exercise 02.04: Change the app icon
+### Exercise 2.4: Change the app icon
 
 By default you get this standard app launch icon for new Android projects:
 
@@ -142,10 +142,10 @@ By default you get this standard app launch icon for new Android projects:
 
 You can also use the online [Android Asset Studio](http://android-ui-utils.googlecode.com/hg/asset-studio/dist/icons-launcher.html#foreground.type=clipart&foreground.space.trim=1&foreground.space.pad=0&foreground.clipart=res%2Fclipart%2Ficons%2Fsocial_send_now.svg&foreColor=c00%2C0&crop=0&backgroundShape=bevel&backColor=ffffff%2C100).
 
-### Exercise 02.05: Change the Activity title
+### Exercise 2.5: Change the Activity title
 The title of the MainActivity is set via the `android:label="@string/app_name"` attribute in the [AndroidManifest.xml](lifecyclelogger/src/main/AndroidManifest.xml) file. Use another string and try to change the title of the MainActivity class in the `onCreate()` method.
 
-### Exercise 02.06: Change the background color
+### Exercise 2.6: Change the background color
 
 Try to change the background color of the MainActivity in the [activity_main.xml](lifecyclelogger/src/main/res/layout/activity_main.xml) file.
 
