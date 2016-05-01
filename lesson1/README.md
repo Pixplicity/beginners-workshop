@@ -303,7 +303,7 @@ Some parameters are common to all layouts:
 For the following exercises you can use the “Android preview” tool window which opens up when you open the `activity_main.xml` file. There's no need to compile and deploy the app on your phone yet.
 
 ### Exercise 1.1: Dimensions
-Open the `activity_main.xml` file and change the `android:layout_width` and **android:layout_height** attributes of both the **LinearLayout** and the **TextView** to either `match_parent` or `wrap_content`.
+Open the `activity_main.xml` file and change the `android:layout_width` and `android:layout_height` attributes of both the **LinearLayout** and the **TextView** to either `match_parent` or `wrap_content`.
 
 Play around with different combinations. Can you explain what happens?
 
