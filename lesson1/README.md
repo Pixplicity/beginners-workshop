@@ -321,14 +321,14 @@ Create a new resource file with name `res/drawable/background.xml` and add the x
 
 ```xml
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-        android:shape="rectangle">
-    <gradient 
-            android:type="linear"
-            android:centerX="15%" 
-            android:startColor="#FFFF8340" 
-            android:centerColor="#FFFF8340" 
-            android:endColor="#FF052280" 
-            android:angle="45"/>
+       android:shape="rectangle">
+    <gradient
+        android:angle="45"
+        android:centerColor="#ffbaff8c"
+        android:centerX="25%"
+        android:endColor="#ff94adff"
+        android:startColor="#ffffb48c"
+        android:type="linear"/>
 </shape>
 ```
 
