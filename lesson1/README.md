@@ -305,21 +305,21 @@ Some parameters are common to all layouts:
 
 For the following exercises you can use the “Android preview” tool window which opens up when you open the `activity_main.xml` file. There's no need to compile and deploy the app on your phone yet.
 
-### Exercise 01.01: Dimensions
+### Exercise 1.1: Dimensions
 Open the `activity_main.xml` file and change the `android:layout_width` and **android:layout_height** attributes of both the **LinearLayout** and the **TextView** to either `match_parent` or `wrap_content`.
 
 Play around with different combinations. Can you explain what happens?
 
-### Exercise 01.02: Adding a TextView
+### Exercise 1.2: Adding a TextView
 Add another **TextView** to the `res/activity_main.xml` layout file and see what happens. Can you predict how the other TextView will be layed out?
 
-### Exercise 01.03: LinearLayout orientation
+### Exercise 1.3: LinearLayout orientation
 Add an attribute `android:orientation="vertical"` to the **LinearLayout** tag. What happens?
 
-### Exercise 01.04: TextView attributes
+### Exercise 1.4: TextView attributes
 Add an attribute `android:textColor="#B20"` to the **TextView** tag. Try to find other text attributes you can change.
 
-### Exercise 01.05: Shape drawable
+### Exercise 1.5: Shape drawable
 Create a new resource file with name `res/drawable/background.xml` and add the xml below to that file. Now add an attribute `android:background="@drawable/background"` to the **LinearLayout** or one of the **TextView** tags in the `activity_main.xml` file.
 
 ```xml
