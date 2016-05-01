@@ -20,8 +20,9 @@ public class CustomAdapterActivity extends ListActivity {
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
-        // TODO Exercise 4.3
-        Uri uri = null;
+        // Exercise 4.3
+        Animal item = (Animal) mCustomAdapter.getItem(position);
+        Uri uri = Uri.parse(item.infoUrl);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }

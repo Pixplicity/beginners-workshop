@@ -50,20 +50,20 @@ public class CustomAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        // TODO Exercise 4.3: Return the number of items in our adapter
-        return 0;
+        // Exercise 4.3
+        return mData.size();
     }
 
     @Override
     public Object getItem(int position) {
-        // TODO Exercise 4.3: Retrieve the correct animal and return it
-        return null;
+        // Exercise 4.3
+        return mData.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        // TODO Exercise 4.3: What would be a good value to return here?
-        return 0;
+        // Exercise 4.3
+        return position;
     }
 
     @Override
