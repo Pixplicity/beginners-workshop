@@ -59,7 +59,7 @@ It's time to put the learned stuff into practice!
 1. Import `lesson4` into Android Studio. 
 1. Click on the “TODO” Tool View to see all `TODO` items in the project.
 
-### Exercise 04.01: Create a list
+### Exercise 4.1: Create a list
 
 1. From the “TODO” Tool View, double click on the `TODO Exercise 04.01` item. This opens the `ListViewInLayoutActivity.java` file at the spot where you should enter the code below. 
 
@@ -75,7 +75,7 @@ It's time to put the learned stuff into practice!
   
 1. **BONUS:** Create a custom list item layout, with at least one `TextView` with id `@android:id/text1`, and assign that to the `ArrayAdapter` constructor.
 
-### Exercise 04.02: Listen for list item clicks
+### Exercise 4.2: Listen for list item clicks
 
 1. From the “TODO” Tool View, double click on the `TODO Exercise 04.02` item. 
 
@@ -146,7 +146,7 @@ Okay, let's see this in action with some data.
 
 ## Exercises (part 2)
 
-### Exercise 04.03: Implement the CustomAdapter
+### Exercise 4.3: Implement the CustomAdapter
 
 1. From the “TODO” Tool View, navigate to both items described as `TODO Exercise 04.03`. 
 		
