@@ -303,4 +303,4 @@ When you click on an image and hear a sound press the back or the home button. D
 
 ## Conclusion
 
-The **ViewPager** is a pretty standard view which you will use frequently in your Android apps. **Fragments** allow you to cut up your UI in smaller portions and with their modularity force you to chop up your app architecture as well. Fragments should know very little to nothing about their parent activities. Any user events happening inside the fragment should be propagated up to its parent activity.
+The **ViewPager** is a pretty standard view which you will use frequently in your Android apps. **Fragments** allow you to cut up your UI in smaller portions and with their modularity force you to chop up your app architecture as well. Fragments should know very little to nothing about their parent activities. Any user events happening inside the fragment should be propagated up to its parent activity, or be communicated in some other way through a observer model pattern.
