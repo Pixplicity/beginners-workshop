@@ -205,23 +205,25 @@ The **FragmentPagerAdapter** is an abstract class which asks us to implement one
 
 ### Exercise 5.1: Creating a Fragment
 
-1. From the “TODO” Tool View, double click on the `TODO Exercise 05.01` item.
+1. From the “TODO” Tool View, double click on the `TODO Exercise 5.1` item.
 1. Simply return a new **AnimalFragment** in the `public Fragment getItem(int position)` method.
 ```java
 @Override
 public Fragment getItem(int position) {
-    return null; // TODO Exercise 05.01 - Return a new AnimalFragment object for the given position
+    // TODO Exercise 5.1 - Return a new AnimalFragment object for the given position
+    return null;
 }
 ```
 
 ### Exercise 5.2: Show a number of pages
 
-1. From the “TODO” Tool View, double click on the `TODO Exercise 05.02` item.
+1. From the “TODO” Tool View, double click on the `TODO Exercise 5.2` item.
 1. The **PagerAdapater** itself is an abstract class as well, which in turn asks us to implement the `getCount()` method we saw in [lesson 4](../lesson4).
 ```java
 @Override
 public int getCount() {
-    return 0; // TODO Exercise 05.02 - Return the amount of animals in our data set.
+    // TODO Exercise 5.2 - Return the amount of animals in our data set.
+    return 0;
 }
 ```
 
