@@ -289,6 +289,8 @@ public void playSound(int soundResource) {
 }
 ```
 
+Note that you will need to take a similar approach for providing the sound resource as what has been done for you with image resources.
+
 > A more convenient approach is to use Jake Wharton's ContractFragment (see [this Gist](https://gist.github.com/JakeWharton/2621173)) which takes care of all the casting and extend your fragments from that class.
 
 That's it! Take your project for a spin!
@@ -296,8 +298,6 @@ That's it! Take your project for a spin!
 ### Exercise 5.5: Pausing sounds
 
 When you click on an image that animal sound will be played. When it's long and you move to the next page the other animal's sound is still playing, which is kind of confusing. Add a **ViewPager.OnPageChangeListener** to the `mViewPager` instance in **MainActivity** and override the `public void onPageSelected(int position)` method to stop playing the currently playing sound.
-
-Note that you will need to take a similar approach for providing the sound resource as what has been done for you with image resources.
 
 ### Exercise 5.6: Adhering to context
 
