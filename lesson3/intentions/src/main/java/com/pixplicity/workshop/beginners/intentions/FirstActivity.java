@@ -65,9 +65,9 @@ public class FirstActivity extends Activity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 12345) {
+        if (requestCode == REQUEST_CODE) {
             if (resultCode == RESULT_OK && data != null) {
-                mEmailMessage.setText(data.getStringExtra("message"));
+                mEmailMessage.setText(data.getStringExtra(SecondActivity.EXTRA_EMAIL_MESSAGE));
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);

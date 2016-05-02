@@ -35,7 +35,7 @@ public class SecondActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Intent intent = new Intent();
-        intent.putExtra("message", mEmailMessage.getText().toString());
+        intent.putExtra(EXTRA_EMAIL_MESSAGE, mEmailMessage.getText().toString());
         setResult(RESULT_OK, intent);
         finish();
     }
