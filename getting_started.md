@@ -3,24 +3,20 @@
 ## Setting up your workshop development environment
 This workshop is aimed at the intermediate Java or OO programmer who wants to start with native Android development. As a prerequisite, please set up a working Android development environment. Please check if you have already installed&mdash;and if not, download and install&mdash;the following software on your computer:
 
-### 1. Java
-
-A [Java Software Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html), version 7 is recommended. A Java Runtime Environment (JRE) is not enough to do Android development, you need the Java SDK!
-
-**Note:** On a Mac you need a Java Runtime Environment (JRE) version 6 to be able to run Android Studio.
-
-### 2. Android Studio
+### 1. Android Studio
 Install the [Android Studio](http://developer.android.com/sdk/installing/studio.html) bundle, which includes: 
   * The Android Studio IDE, which is based on the community edition of IntelliJ IDEA. 
   * All the Android SDK tools to design, test, debug, and profile your app. 
   * The latest Android platform to compile your app. 
   * The latest Android system image to run your app in the emulator.
 
-### 3. Git client (optional)
+If Android Studio gives any errors concerning your version of Java, you may need to update to [Java Software Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) version 8. Note that a Java Runtime Environment (JRE) is not enough to do Android development; you need the Java SDK.
+
+### 2. Git client (optional)
 
 A [Git](http://git-scm.com/downloads) client or command line tool is recommended to clone the workshop repository. [Sourcetree](http://www.sourcetreeapp.com/) is a pretty cool Git GUI client. If you don't have an internet connection, or don't want the hassle of working with Git, you can get (or download) a zip-file with the repository contents on the day of the workshop.
 
-### 4. Ensure everything's up-to-date
+### 3. Ensure everything's up-to-date
 
 ![Android Studio Check for updates](img/android-studio-check-for-updates.png)
 
@@ -54,7 +50,7 @@ Specifically, you should have:
 
 Once you have selected all the packages above click the “Install Packages” button and sit tight.
 
-### 5. Prepare a device
+### 4. Prepare a device
 
 Preferably we would like you to connect your phone to your computer and run and test the samples on a real device. If you don't own an Android device you can install an Android emulator, also known as an Android Virtual Device (AVD).
 
@@ -68,7 +64,7 @@ Plug in your device through USB, and make sure it's set up for USB debugging and
 
 ![USB Debugging](img/usb-debugging.png)
 
-If you want to run apps on your device the first thing you need to do is enable “USB debugging” on the device itself (by starting the Settings app on your device and selecting “Developer Options” → USB Debugging”). If you don't see the developer options item in your settings menu and you are running Android 4.0 (Ice Cream Sandwich) or higher you can enable them by clicking on the “Settings” → “About Phone” → “Build” item a couple of times to enable them. If you run an older Android version the USB Debugging checkbox might reside in the Applications section of your settings. 
+If you want to run apps on your device, the first thing you need to do is enable “USB debugging” on the device itself. You can do so by starting the Settings app on your device and selecting “Developer Options” → USB Debugging”. If you don't see the developer options item in your settings menu, you can enable them by clicking on the “Settings” → “About Phone” → “Build” item a couple of times to enable them.
 
 #### ADB permission
 
