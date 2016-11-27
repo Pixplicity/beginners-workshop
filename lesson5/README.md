@@ -205,23 +205,25 @@ The **FragmentPagerAdapter** is an abstract class which asks us to implement one
 
 ### Exercise 5.1: Creating a Fragment
 
-1. From the “TODO” Tool View, double click on the `TODO Exercise 05.01` item.
+1. From the “TODO” Tool View, double click on the `TODO Exercise 5.1` item.
 1. Simply return a new **AnimalFragment** in the `public Fragment getItem(int position)` method.
 ```java
 @Override
 public Fragment getItem(int position) {
-    return null; // TODO Exercise 05.01 - Return a new AnimalFragment object for the given position
+    // TODO Exercise 5.1 - Return a new AnimalFragment object for the given position
+    return null;
 }
 ```
 
 ### Exercise 5.2: Show a number of pages
 
-1. From the “TODO” Tool View, double click on the `TODO Exercise 05.02` item.
+1. From the “TODO” Tool View, double click on the `TODO Exercise 5.2` item.
 1. The **PagerAdapater** itself is an abstract class as well, which in turn asks us to implement the `getCount()` method we saw in [lesson 4](../lesson4).
 ```java
 @Override
 public int getCount() {
-    return 0; // TODO Exercise 05.02 - Return the amount of animals in our data set.
+    // TODO Exercise 5.2 - Return the amount of animals in our data set.
+    return 0;
 }
 ```
 
@@ -287,6 +289,8 @@ public void playSound(int soundResource) {
 }
 ```
 
+Note that you will need to take a similar approach for providing the sound resource as what has been done for you with image resources.
+
 > A more convenient approach is to use Jake Wharton's ContractFragment (see [this Gist](https://gist.github.com/JakeWharton/2621173)) which takes care of all the casting and extend your fragments from that class.
 
 That's it! Take your project for a spin!
@@ -294,8 +298,6 @@ That's it! Take your project for a spin!
 ### Exercise 5.5: Pausing sounds
 
 When you click on an image that animal sound will be played. When it's long and you move to the next page the other animal's sound is still playing, which is kind of confusing. Add a **ViewPager.OnPageChangeListener** to the `mViewPager` instance in **MainActivity** and override the `public void onPageSelected(int position)` method to stop playing the currently playing sound.
-
-Note that you will need to take a similar approach for providing the sound resource as what has been done for you with image resources.
 
 ### Exercise 5.6: Adhering to context
 

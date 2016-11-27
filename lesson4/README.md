@@ -61,7 +61,7 @@ It's time to put the learned stuff into practice!
 
 ### Exercise 4.1: Create a list
 
-1. From the “TODO” Tool View, double click on the `TODO Exercise 04.01` item. This opens the `ListViewInLayoutActivity.java` file at the spot where you should enter the code below. 
+1. From the “TODO” Tool View, double click on the `TODO Exercise 4.1` item. This opens the `ListViewInLayoutActivity.java` file at the spot where you should enter the code below. 
 
 1. Set the content view to the `activity_listview_in_layout.xml` layout file. 
 
@@ -77,7 +77,7 @@ It's time to put the learned stuff into practice!
 
 ### Exercise 4.2: Listen for list item clicks
 
-1. From the “TODO” Tool View, double click on the `TODO Exercise 04.02` item. 
+1. From the “TODO” Tool View, double click on the `TODO Exercise 4.2` item. 
 
 1. Again create a local variable `String[] entries` which contains the items in the `animals` string resource array (see [arrays.xml](listviews/src/main/res/values/arrays.xml)) 
 
@@ -148,7 +148,7 @@ Okay, let's see this in action with some data.
 
 ### Exercise 4.3: Implement the CustomAdapter
 
-1. From the “TODO” Tool View, navigate to both items described as `TODO Exercise 04.03`. 
+1. From the “TODO” Tool View, navigate to both items described as `TODO Exercise 4.3`. 
 		
 1. Complete the `getCount()`, `getItem(int position)` and `getItemId(int position)` methods to return logical values and take your project for a spin.
 		
